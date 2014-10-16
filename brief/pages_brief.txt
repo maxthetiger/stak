@@ -1,0 +1,133 @@
+/***********************
+********* HOME *********
+***********************/
+
+	Header
+		Logo
+		Barre de recherche
+		si pas connecté | Sign in | si connecté | Mon compte
+		si pas connecté | Sign up | si connecté | Log out
+
+	Nav
+		Fil des questions
+		Tutos
+		Carriere
+		Actus et evenements
+
+	Aside
+		Bloc (Rejoins nous) si pas connecté
+		Bloc événements et actus
+
+	Main 
+		Articles * 3
+			Titre
+			Tags
+
+	Footer
+		Mentions légales
+		Copyright
+
+
+
+
+/***********************
+******** DETAILS *******
+***********************/
+
+
+	Header
+		Logo
+		Barre de recherche
+		si pas connecté | Sign in | si connecté | Mon compte
+		si pas connecté | Sign up | si connecté | Log out
+
+	Nav
+		Fil des questions
+		Tutos
+		Carriere
+		Actus et evenements
+
+	Aside
+		Bloc (Rejoins nous) si pas connecté
+		Bloc événements et actus
+
+	Main 
+		Articles * 1
+			Titre
+			Note
+			Tags
+			Comment Articles
+			Best Reponse + Note
+			Reponses
+			Comment Reponses
+
+	Footer
+		Mentions légales
+		Copyright
+
+
+
+/***********************
+** REGISTER / LOG IN ***
+***********************/
+
+
+	Header
+		Logo
+		
+	Main 
+		Formulaire Sign in
+			Pseudo
+			Email
+			MDP
+			MDP oublié
+			Submit
+
+		Formulaire Sign up
+			Pseudo
+			Email
+			Email Valid
+			MDP
+			MDP
+			Submit
+
+	Footer
+		Mentions légales
+		Copyright
+
+
+
+
+
+/***********************
+******** PROFIL ********
+***********************/
+
+	Header
+		Logo
+		Barre de recherche
+		si pas connecté | Sign in | si connecté | Mon compte
+		si pas connecté | Sign up | si connecté | Log out
+
+	Nav
+		Fil des questions
+		Tutos
+		Carriere
+		Actus et evenements
+
+	Main 
+		Header
+			Avatar
+			Pseudo
+			Score
+		Nav
+			Edit profil
+			View profil
+			Dashboard
+				Trier mes articles ( question, réponses, commentaires)
+				Creer un article
+				Fil des articles
+
+	Footer
+		Mentions légales
+		Copyright
