@@ -1,0 +1,9 @@
+/** RESET CSS **/
+/* @import "normalize.css" ou reset */
+@import "reset.css";
+
+html
+{
+	width: 1200px;
+	margin: auto;
+}
