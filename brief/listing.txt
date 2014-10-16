@@ -1,0 +1,111 @@
+STAK By Guillaume & Cyril
+
+1/ LA STRUCTURE DU SITE 
+
+index.php
+details.php
+connect.php :
+	- login.php
+	- logout.php
+profil.php
+
+ADMIN
+
+
+
+2/ LA STRUCTURE DES TABLES
+
+TABLE 1 : users
+	id
+	pseudo
+	email
+	pw
+	salt
+	token
+	dateCreated
+	dateModified
+	isBanned
+	isActive
+	Favoris
+
+
+TABLE 2 : profil
+	id
+	nom
+	prenom
+	ville
+	pays
+	langue
+	metier
+	avatar
+	webSite
+	github
+	score
+	status
+	dateCreated
+	dateModified
+	id_users
+
+
+TABLE 3 : article
+	id
+	title
+	content
+	view
+	dateCreated
+	dateModified
+	id_users
+
+
+TABLE 4 : tags
+	id
+	name
+	dateCreated
+	dateModified
+	
+
+TABLE 5 : article_tags
+	id
+	id_article
+	id_tags
+
+
+TABLE 6 : reponse
+	id
+	reponses
+	note
+	best
+	dateCreated
+	dateModified
+	id_users
+
+
+TABLE 7 : article_reponse
+	id
+	id_article
+	id_reponse
+	
+
+TABLE 8 : comment
+	id
+	comment
+	dateCreated
+	dateModified
+	
+
+TABLE 9 : article_comment
+	id
+	id_comment
+	id_article
+	id_users
+
+TABLE 10 : comment_reponse
+	id
+	id_comment
+	id_reponse
+
+TABLE 11 : favoris
+	id
+	id_article
+	id_users
+
