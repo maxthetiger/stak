@@ -77,8 +77,7 @@
 		
 	Main 
 		Formulaire Sign in
-			Pseudo
-			Email
+			Pseudo	||  Email
 			MDP
 			MDP oublié
 			Submit
@@ -124,7 +123,7 @@
 			Edit profil
 			View profil
 			Dashboard
-				Trier mes articles ( question, réponses, commentaires)
+				Trier mes articles ( question, réponses, commentaires favoris)
 				Creer un article
 				Fil des articles
 
