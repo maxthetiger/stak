@@ -9,6 +9,10 @@
 	font-family: arial;
 }
 
+input[type="submit"]{
+	cursor: pointer;
+}
+
 #header,
 #formulaire_container {
 	width:100%;
@@ -16,10 +20,6 @@
 	padding: 25px 0;
 	margin: auto;
 	overflow: hidden;
-}
-
-#header{
-
 }
 
 #header #logo{
@@ -40,12 +40,20 @@
 	overflow: hidden;
 }
 
-#signup{
+#formulaire_container #signup{
 	float: left;
 	margin-left: 25px;
 }
 
-#signin{
+#formulaire_container #signin{
+	float: right;
+	margin-right: 25px;
+}
+
+#formulaire_container #oublie{
+	width: 40%;
+	background-color: #16a8d7;
+	overflow: hidden;
 	float: right;
 	margin-right: 25px;
 }
@@ -109,7 +117,6 @@
 	margin-bottom: 15px;
 	padding: 8px 0;
 	border: 1px solid #ddd;
-
 	box-shadow: inset -1px -1px 1px #555;
 
 	background: #f2f2f2; /* Old browsers */
@@ -120,8 +127,6 @@
 	background: -ms-linear-gradient(top,  #f2f2f2 0%,#e2e2e2 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #f2f2f2 0%,#e2e2e2 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#e2e2e2',GradientType=0 ); /* IE6-9 */
-
-
 }
 
 
@@ -140,18 +145,115 @@
 
 #formulaire_container div #forget{
 	text-align: center;
-	margin-top: 10px;
+	margin-top: 5px;
 	color: #fff;
-	font-size: 13px;
+	font-size: 12px;
+	text-shadow: 0 0 2px #333;
 }
 
 #formulaire_container div #forget .forget_click{
-	color: #555;
-	font-size: 13px;
+
+	margin-left: 10px;
+	color: #333;
+	font-size: 12px;
 	text-decoration: none;
+	text-shadow: 0 0 0 #333;
 }
 
 #formulaire_container div #forget .forget_click:hover{
 	text-decoration: underline;
+	cursor: help;
+}
+
+
+
+
+
+/***************************************************
+******************** REMEMBER **********************
+***************************************************/
+
+#formulaire_container #remember{
+	width: 40%;
+	background-color: #16a8d7;
+	overflow: hidden;
+	float: right;
+	margin-right: 25px;
+}
+
+#formulaire_container #remember form{
+	background-color: #16a8d7;
+	border-radius: 0;
+	box-shadow: 0 0 0px #16a8d7;
+}
+
+#formulaire_container #remember form input[type="email"]{
+	text-align: center;
+	font-size: 13px;
+	color: #555;
+	width: 79%;
+	display: block;
+	border-radius: 5px 0 0 5px;
+	margin-top: 15px;
+	padding: 8px 0;
+	border: 1px solid #444;	
+	border-right-width: 0;
+	box-shadow: 0 0 0px #444;
+	float: left;
+	height: 15px;
+}
+
+#formulaire_container #remember form input[type="submit"]{
+	width: 20%;
+	display: block;
+	margin-top: 15px;
+	background: #fff;
+	border-radius: 0 5px 5px 0; 
+	border: 1px solid #444;
+	border-left:0;
+	float: right;
+	box-shadow: 0 0 0px #444; 
+	height: 33px;
+	position: relative;
+	left: -3px;
+	overflow: hidden;
+}
+
+#formulaire_container #remember form input[type="submit"]{
+/* 	display: block;
+height: 33px;
+width: 50%; */
+	background-image: url(../img/picto.png);
+	background-repeat: no-repeat;
+	background-size: 45% ;
+	background-position: 15px 2px ;
+}
+
+
+
+
+/***************************************************
+********************* FOOTER ***********************
+***************************************************/
+
+footer{
+	width:100%;
+	max-width: 980px;
+	padding: 25px 0;
+	margin: auto;
+	overflow: hidden;
+}
+
+
+footer div {
+	width: 200px;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+	text-shadow: 0 0 2px #333;
+	left: 50%;
+	margin-left: -100px;
+	position: absolute;
+	bottom: 15px;
 }
 

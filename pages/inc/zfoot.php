@@ -3,6 +3,8 @@
 		<div id="mentions">
 			
 		</div>
-		<span>Copyright &copy;  APC.Web | Kiwimagine - <?php echo date("Y");?></span>
+		<div>
+			<p>&copy; Copyright APC.Web | Kiwimagine - <?php echo date("Y");?></p>
+		</div>
 	</div>
 </footer>
