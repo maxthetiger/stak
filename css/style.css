@@ -40,6 +40,32 @@ input[type="submit"]{
 	overflow: hidden;
 }
 
+#formulaire_container #avatar{
+	width: 80%;
+	background-color: #FFF;
+	margin: auto;
+	overflow: hidden;
+}
+#formulaire_container #avatar #pics{
+	width: 100px;
+	height: 100px;
+	background-color: #FFF;
+	border-radius: 10px;
+	border: 1px solid #16A8D7;
+	background-image: url(../img/avatar_200.png);
+	background-repeat: no-repeat;
+	background-size: 100px 100px;
+	overflow: hidden;
+	background-position: 0 0;
+	margin: auto;
+	margin-bottom: 15px;
+}
+
+#formulaire_container #avatar input{
+	margin: 0 auto 20px;
+	}
+
+
 #formulaire_container #signup{
 	float: left;
 	margin-left: 25px;
@@ -50,7 +76,8 @@ input[type="submit"]{
 	margin-right: 25px;
 }
 
-#formulaire_container #reset{
+#formulaire_container #reset,
+#formulaire_container #profilEdit{
 	margin: auto;
 }
 
@@ -97,8 +124,8 @@ input[type="submit"]{
 #formulaire_container #profilEdit form input[type="text"],
 #formulaire_container div form input[type="text"],
 #formulaire_container div form input[type="email"],
-#formulaire_container div form select,
-#formulaire_container div form input[type="password"]{
+#formulaire_container div form input[type="password"],
+#formulaire_container div form select{
 	text-align: center;
 	font-size: 13px;
 	color: #555;
@@ -119,7 +146,7 @@ input[type="submit"]{
 	width: 100%;
 	margin: auto;
 }
-#formulaire_container div form input[type="file"],
+
 #formulaire_container div form input[type="submit"]{
 	text-align: center;
 	font-size: 17px;

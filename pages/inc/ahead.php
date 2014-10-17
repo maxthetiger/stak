@@ -1,5 +1,5 @@
 <header id="header">
-	<div id="logo"></div>
+	<a href="index.php"><div id="logo"></div></a>
 	<div id="search"></div>
 	<div id="connect"></div>
 </header>

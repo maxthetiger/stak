@@ -1,13 +1,17 @@
 <section id="formulaire_container">
 	<div id="profilEdit">
 		<form>
-			<div id="avatar">
+			<header>
+				<p>Profil</p>
+			</header>
+			<section id="avatar">
+				<div id="pics"></div>
 				<input type="file" value="avatar" name="avatar" >
-			</div>	
-			<input type="text" value="nom" name="nom" placeholder="Nom">
-			<input type="text" value="prenom" name="prenom" placeholder="Prénom">
-			<input type="text" value="ville" name="ville" placeholder="Ville">
-			<input type="text" value="pays" name="pays" placeholder="Pays">
+			</section>				
+			<input type="text" name="nom" placeholder="Nom">
+			<input type="text" name="prenom" placeholder="Prénom">
+			<input type="text" name="ville" placeholder="Ville">
+			<input type="text" name="pays" placeholder="Pays">
 			<select name="country">
 				<option value="albanais">albanais</option>
 				<option value="allemand">allemand</option>
@@ -32,7 +36,7 @@
 				<option value="estonien">estonien</option>
 				<option value="finnois">finnois</option>
 				<option value="flamand">flamand</option>
-				<option value="français">français</option>
+				<option value="français" selected>français</option>
 				<option value="galicien">galicien</option>
 				<option value="gallois">gallois</option>
 				<option value="géorgien">georgien</option>
@@ -65,9 +69,9 @@
 				<option value="ukrainien">ukrainien</option>
 				<option value="vietnamien">vietnamien</option>
 		</select>
-			<input type="text" value="metier" name="metier" placeholder="Métier">
-			<input type="text" value="website" name="website" placeholder="Site Web">
-			<input type="text" value="github" name="github" placeholder="Github">
+			<input type="text" name="metier" placeholder="Métier">
+			<input type="text" name="website" placeholder="Site Web">
+			<input type="text" name="github" placeholder="Github">
 		</form>
 	</div>	
 </section>
