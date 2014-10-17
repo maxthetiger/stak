@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
-			<title>WF3 - Formation - ---- - ----- </title>
+			<title>STAK | <?php echo $page; ?></title>
 			<link rel="stylesheet" href="css/style.css">
 			<link rel="stylesheet" href="css/jquery-ui.min.css">
 	</head>
