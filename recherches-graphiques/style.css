@@ -1,0 +1,37 @@
+/** RESET CSS **/
+/* @import "normalize.css" ou reset */
+@import "../css/reset.css";
+
+#header {
+	width:100%;
+	max-width: 980px;
+	height: 125px;
+	border:1px solid black;
+	margin: auto;
+	overflow: hidden;
+}
+
+#header #logo{
+	background-image: url(../img/logo.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	margin-top: 10px;
+	width: 175px;
+	height: 105px;
+	float: left;
+}
+
+
+#header a{
+	padding: 3px 5px;
+	background-color: #5599FF;
+	color: #fff;
+	font-family: verdana;
+	font-size: 15px;
+	text-decoration: none;
+}
+
+#header a:hover{
+	background-color: #3355BB;
+	text-decoration: underline;
+}
