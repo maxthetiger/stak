@@ -3,7 +3,7 @@
 @import "../css/reset.css";
 
 
-#formulaire{
+#body{
 	background: #16a8d7; /* Old browsers */
 	font-family: arial;
 }
@@ -48,6 +48,11 @@ input[type="submit"]{
 	float: right;
 	margin-right: 25px;
 }
+
+#formulaire_container #reset{
+	margin: auto;
+}
+
 
 #formulaire_container #oublie{
 	width: 40%;
