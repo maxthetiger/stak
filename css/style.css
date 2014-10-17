@@ -50,6 +50,11 @@ input[type="submit"]{
 	margin-right: 25px;
 }
 
+#formulaire_container #reset{
+	margin: auto;
+}
+
+
 #formulaire_container #oublie{
 	width: 40%;
 	background-color: #16a8d7;
@@ -89,9 +94,10 @@ input[type="submit"]{
 	text-transform: uppercase;
 	color: #555;
 }
-
+#formulaire_container #profilEdit form input[type="text"],
 #formulaire_container div form input[type="text"],
 #formulaire_container div form input[type="email"],
+#formulaire_container div form select,
 #formulaire_container div form input[type="password"]{
 	text-align: center;
 	font-size: 13px;
@@ -104,7 +110,16 @@ input[type="submit"]{
 	padding: 8px 0;
 	border: 1px solid #ddd;
 }
-
+#formulaire_container div form select{
+	padding-left: 33%;
+}
+#formulaire_container div form .left
+{
+	text-align: center;
+	width: 100%;
+	margin: auto;
+}
+#formulaire_container div form input[type="file"],
 #formulaire_container div form input[type="submit"]{
 	text-align: center;
 	font-size: 17px;

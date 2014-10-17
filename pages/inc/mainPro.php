@@ -5,8 +5,8 @@
 		<div id="Score"></div>
 	</header>
 	<nav id="navPro">
-		<a href="?page=edit">edit profil</a>
-		<a href="?page=view">view profil</a>
-		<a href="?page=dashboard">tableau de bord</a>
+		<a href="?page=profil&onglet=edit">edit profil</a>
+		<a href="?page=profil&onglet=view">view profil</a>
+		<a href="?page=profil&onglet=dashboard">tableau de bord</a>
 	</nav>
 </section>
