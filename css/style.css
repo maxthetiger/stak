@@ -242,7 +242,7 @@ input[type="submit"]{
 	border-right-width: 0;
 	box-shadow: 0 0 0px #444;
 	float: left;
-	height: 15px;
+	height: 33px;
 }
 
 #formulaire_container #remember form input[type="submit"]{
@@ -259,12 +259,6 @@ input[type="submit"]{
 	position: relative;
 	left: -3px;
 	overflow: hidden;
-}
-
-#formulaire_container #remember form input[type="submit"]{
-/* 	display: block;
-height: 33px;
-width: 50%; */
 	background-image: url(../img/picto.png);
 	background-repeat: no-repeat;
 	background-size: 45% ;
