@@ -1,3 +1,13 @@
+Couleurs
+
+ HEXA			RGB			Teinte
+#16A8D7		 22 168 215		Bleu
+#FFF		255 255 255		Blanc
+#000		  0   0   0 	Noir
+
+
+
+
 /***********************
 ********* HOME *********
 ***********************/
@@ -130,3 +140,100 @@
 	Footer
 		Mentions légales
 		Copyright
+
+
+MISE EN PAGE DETAILLEE
+
+
+Header
+		Logo
+		Barre de recherche
+		si pas connecté | Sign in | si connecté | Mon compte
+		si pas connecté | Sign up | si connecté | Log out
+
+Identique dans home, details, profil
+Diff dans Register juste le logo
+
+/***************************************************/
+
+Nav
+		Fil des questions
+		Tutos
+		Carriere
+		Actus et evenements
+
+Identique dans home, details, profil
+Absent dans Register
+
+/***************************************************/
+
+Aside
+		Bloc (Rejoins nous) si pas connecté
+		Bloc événements et actus
+
+Identique dans home, details
+Absent dans profil et Register
+
+/***************************************************/
+
+Footer
+	Mentions légales
+	Copyright
+
+Identique partout
+
+/***************************************************/
+MAIN :
+
+	Home :
+
+	Articles * 3
+			Titre
+			Tags
+
+	/*****************************************/
+
+	Details :
+
+	Articles * 1
+		Titre
+		Note
+		Tags
+		Comment Articles
+		Best Reponse + Note
+		Reponses
+		Comment Reponses
+
+	/*****************************************/
+
+	Register :
+
+	Formulaire Sign in
+		Pseudo	||  Email
+		MDP
+		MDP oublié
+		Submit
+
+	Formulaire Sign up
+		Pseudo
+		Email
+		Email Valid
+		MDP
+		MDP
+		Submit
+
+	/*****************************************/
+
+	Profil :
+
+	Header
+		Avatar
+		Pseudo
+		Score
+	Nav
+		Edit profil
+		View profil
+		Dashboard
+			Trier mes articles ( question, réponses, commentaires favoris)
+			Creer un article
+			Fil des articles
