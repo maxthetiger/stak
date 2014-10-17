@@ -1,9 +1,157 @@
 /** RESET CSS **/
 /* @import "normalize.css" ou reset */
-@import "reset.css";
+@import "../css/reset.css";
 
-html
-{
-	width: 1200px;
+
+
+#body{
+	background: #16a8d7; /* Old browsers */
+	font-family: arial;
+}
+
+#header,
+#formulaire_container {
+	width:100%;
+	max-width: 980px;
+	padding: 25px 0;
+	margin: auto;
+	overflow: hidden;
+}
+
+#header{
+
+}
+
+#header #logo{
+	background-image: url(../img/logo_bw.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 250px;
+	height: 150px;
 	margin: auto;
 }
+
+
+#formulaire_container div{
+	width: 40%;
+	background-color: rgba(0, 0, 0, 0.1);
+	padding: 5px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+#signup{
+	float: left;
+	margin-left: 25px;
+}
+
+#signin{
+	float: right;
+	margin-right: 25px;
+}
+
+#formulaire_container div form{
+	background-color: #fff;
+	border-radius: 10px;
+	overflow: hidden;
+	box-shadow: 0 0 3px #555;
+}
+
+#formulaire_container div form header{
+	padding: 15px 20px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #999;
+
+	background: #f2f2f2; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f2f2f2 0%, #e2e2e2 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#e2e2e2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f2f2f2 0%,#e2e2e2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f2f2f2 0%,#e2e2e2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f2f2f2 0%,#e2e2e2 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f2f2f2 0%,#e2e2e2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#e2e2e2',GradientType=0 ); /* IE6-9 */
+
+}
+
+#formulaire_container div form header p{
+	font-family: arial;
+	font-size: 15px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	color: #555;
+}
+
+#formulaire_container div form input[type="text"],
+#formulaire_container div form input[type="email"],
+#formulaire_container div form input[type="password"]{
+	text-align: center;
+	font-size: 13px;
+	color: #555;
+	width: 80%;
+	display: block;
+	margin: auto;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	padding: 8px 0;
+	border: 1px solid #ddd;
+}
+
+#formulaire_container div form input[type="submit"]{
+	text-align: center;
+	font-size: 17px;
+	font-weight: 700;
+	color: #555;
+	width: 50%;
+	display: block;
+	margin: auto;
+	border-radius: 5px;
+	margin-bottom: 15px;
+	padding: 8px 0;
+	border: 1px solid #ddd;
+
+	box-shadow: inset -1px -1px 1px #555;
+
+	background: #f2f2f2; /* Old browsers */
+	background: -moz-linear-gradient(top,  #f2f2f2 0%, #e2e2e2 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f2f2f2), color-stop(100%,#e2e2e2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #f2f2f2 0%,#e2e2e2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #f2f2f2 0%,#e2e2e2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #f2f2f2 0%,#e2e2e2 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #f2f2f2 0%,#e2e2e2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#e2e2e2',GradientType=0 ); /* IE6-9 */
+
+
+}
+
+
+#formulaire_container div form input[type="submit"]:hover{
+	box-shadow: inset 1px 1px 1px #555;
+
+	background: #e2e2e2; /* Old browsers */
+	background: -moz-linear-gradient(top,  #e2e2e2 0%, #f2f2f2 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e2e2e2), color-stop(100%,#f2f2f2)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #e2e2e2 0%,#f2f2f2 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #e2e2e2 0%,#f2f2f2 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #e2e2e2 0%,#f2f2f2 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #e2e2e2 0%,#f2f2f2 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#f2f2f2',GradientType=0 ); /* IE6-9 */
+}
+
+#formulaire_container div #forget{
+	text-align: center;
+	margin-top: 10px;
+	color: #fff;
+	font-size: 13px;
+}
+
+#formulaire_container div #forget .forget_click{
+	color: #555;
+	font-size: 13px;
+	text-decoration: none;
+}
+
+#formulaire_container div #forget .forget_click:hover{
+	text-decoration: underline;
+}
+

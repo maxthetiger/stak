@@ -4,13 +4,13 @@
 
 
 
-#connexion{
+#body{
 	background: #16a8d7; /* Old browsers */
 	font-family: arial;
 }
 
 #header,
-#connexion_container {
+#formulaire_container {
 	width:100%;
 	max-width: 980px;
 	padding: 25px 0;
@@ -32,7 +32,7 @@
 }
 
 
-#connexion_container div{
+#formulaire_container div{
 	width: 40%;
 	background-color: rgba(0, 0, 0, 0.1);
 	padding: 5px;
@@ -50,14 +50,14 @@
 	margin-right: 25px;
 }
 
-#connexion_container div form{
+#formulaire_container div form{
 	background-color: #fff;
 	border-radius: 10px;
 	overflow: hidden;
 	box-shadow: 0 0 3px #555;
 }
 
-#connexion_container div form header{
+#formulaire_container div form header{
 	padding: 15px 20px;
 	margin-bottom: 10px;
 	border-bottom: 1px solid #999;
@@ -73,7 +73,7 @@
 
 }
 
-#connexion_container div form header p{
+#formulaire_container div form header p{
 	font-family: arial;
 	font-size: 15px;
 	font-weight: 700;
@@ -82,9 +82,9 @@
 	color: #555;
 }
 
-#connexion_container div form input[type="text"],
-#connexion_container div form input[type="email"],
-#connexion_container div form input[type="password"]{
+#formulaire_container div form input[type="text"],
+#formulaire_container div form input[type="email"],
+#formulaire_container div form input[type="password"]{
 	text-align: center;
 	font-size: 13px;
 	color: #555;
@@ -97,7 +97,7 @@
 	border: 1px solid #ddd;
 }
 
-#connexion_container div form input[type="submit"]{
+#formulaire_container div form input[type="submit"]{
 	text-align: center;
 	font-size: 17px;
 	font-weight: 700;
@@ -125,7 +125,7 @@
 }
 
 
-#connexion_container div form input[type="submit"]:hover{
+#formulaire_container div form input[type="submit"]:hover{
 	box-shadow: inset 1px 1px 1px #555;
 
 	background: #e2e2e2; /* Old browsers */
@@ -138,20 +138,20 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#f2f2f2',GradientType=0 ); /* IE6-9 */
 }
 
-#connexion_container div #forget{
+#formulaire_container div #forget{
 	text-align: center;
 	margin-top: 10px;
 	color: #fff;
 	font-size: 13px;
 }
 
-#connexion_container div #forget .forget_click{
+#formulaire_container div #forget .forget_click{
 	color: #555;
 	font-size: 13px;
 	text-decoration: none;
 }
 
-#connexion_container div #forget .forget_click:hover{
+#formulaire_container div #forget .forget_click:hover{
 	text-decoration: underline;
 }
 

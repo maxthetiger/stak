@@ -12,4 +12,4 @@
 	</head>
 	<!-- Fin En-tête -->
 
-	
+<body id="body">
