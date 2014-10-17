@@ -3,23 +3,22 @@
 @import "../css/reset.css";
 
 
-
-#connexion{
+#formulaire{
 	background: #16a8d7; /* Old browsers */
 	font-family: arial;
 }
 
+input[type="submit"]{
+	cursor: pointer;
+}
+
 #header,
-#connexion_container {
+#formulaire_container {
 	width:100%;
 	max-width: 980px;
 	padding: 25px 0;
 	margin: auto;
 	overflow: hidden;
-}
-
-#header{
-
 }
 
 #header #logo{
@@ -32,7 +31,7 @@
 }
 
 
-#connexion_container div{
+#formulaire_container div{
 	width: 40%;
 	background-color: rgba(0, 0, 0, 0.1);
 	padding: 5px;
@@ -40,24 +39,32 @@
 	overflow: hidden;
 }
 
-#signup{
+#formulaire_container #signup{
 	float: left;
 	margin-left: 25px;
 }
 
-#signin{
+#formulaire_container #signin{
 	float: right;
 	margin-right: 25px;
 }
 
-#connexion_container div form{
+#formulaire_container #oublie{
+	width: 40%;
+	background-color: #16a8d7;
+	overflow: hidden;
+	float: right;
+	margin-right: 25px;
+}
+
+#formulaire_container div form{
 	background-color: #fff;
 	border-radius: 10px;
 	overflow: hidden;
 	box-shadow: 0 0 3px #555;
 }
 
-#connexion_container div form header{
+#formulaire_container div form header{
 	padding: 15px 20px;
 	margin-bottom: 10px;
 	border-bottom: 1px solid #999;
@@ -73,7 +80,7 @@
 
 }
 
-#connexion_container div form header p{
+#formulaire_container div form header p{
 	font-family: arial;
 	font-size: 15px;
 	font-weight: 700;
@@ -82,9 +89,9 @@
 	color: #555;
 }
 
-#connexion_container div form input[type="text"],
-#connexion_container div form input[type="email"],
-#connexion_container div form input[type="password"]{
+#formulaire_container div form input[type="text"],
+#formulaire_container div form input[type="email"],
+#formulaire_container div form input[type="password"]{
 	text-align: center;
 	font-size: 13px;
 	color: #555;
@@ -97,7 +104,7 @@
 	border: 1px solid #ddd;
 }
 
-#connexion_container div form input[type="submit"]{
+#formulaire_container div form input[type="submit"]{
 	text-align: center;
 	font-size: 17px;
 	font-weight: 700;
@@ -109,7 +116,6 @@
 	margin-bottom: 15px;
 	padding: 8px 0;
 	border: 1px solid #ddd;
-
 	box-shadow: inset -1px -1px 1px #555;
 
 	background: #f2f2f2; /* Old browsers */
@@ -120,12 +126,10 @@
 	background: -ms-linear-gradient(top,  #f2f2f2 0%,#e2e2e2 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #f2f2f2 0%,#e2e2e2 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f2f2', endColorstr='#e2e2e2',GradientType=0 ); /* IE6-9 */
-
-
 }
 
 
-#connexion_container div form input[type="submit"]:hover{
+#formulaire_container div form input[type="submit"]:hover{
 	box-shadow: inset 1px 1px 1px #555;
 
 	background: #e2e2e2; /* Old browsers */
@@ -138,20 +142,116 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2e2e2', endColorstr='#f2f2f2',GradientType=0 ); /* IE6-9 */
 }
 
-#connexion_container div #forget{
+#formulaire_container div #forget{
 	text-align: center;
-	margin-top: 10px;
+	margin-top: 5px;
 	color: #fff;
-	font-size: 13px;
+	font-size: 12px;
+	text-shadow: 0 0 2px #333;
 }
 
-#connexion_container div #forget .forget_click{
-	color: #555;
-	font-size: 13px;
+#formulaire_container div #forget .forget_click{
+	margin-left: 10px;
+	color: #333;
+	font-size: 12px;
 	text-decoration: none;
+	text-shadow: 0 0 0 #333;
 }
 
-#connexion_container div #forget .forget_click:hover{
+#formulaire_container div #forget .forget_click:hover{
 	text-decoration: underline;
+	cursor: help;
+}
+
+
+
+
+
+/***************************************************
+******************** REMEMBER **********************
+***************************************************/
+
+#formulaire_container #remember{
+	width: 40%;
+	background-color: #16a8d7;
+	overflow: hidden;
+	float: right;
+	margin-right: 25px;
+}
+
+#formulaire_container #remember form{
+	background-color: #16a8d7;
+	border-radius: 0;
+	box-shadow: 0 0 0px #16a8d7;
+}
+
+#formulaire_container #remember form input[type="email"]{
+	text-align: center;
+	font-size: 13px;
+	color: #555;
+	width: 79%;
+	display: block;
+	border-radius: 5px 0 0 5px;
+	margin-top: 15px;
+	padding: 8px 0;
+	border: 1px solid #444;	
+	border-right-width: 0;
+	box-shadow: 0 0 0px #444;
+	float: left;
+	height: 15px;
+}
+
+#formulaire_container #remember form input[type="submit"]{
+	width: 20%;
+	display: block;
+	margin-top: 15px;
+	background: #fff;
+	border-radius: 0 5px 5px 0; 
+	border: 1px solid #444;
+	border-left:0;
+	float: right;
+	box-shadow: 0 0 0px #444; 
+	height: 33px;
+	position: relative;
+	left: -3px;
+	overflow: hidden;
+}
+
+#formulaire_container #remember form input[type="submit"]{
+/* 	display: block;
+height: 33px;
+width: 50%; */
+	background-image: url(../img/picto.png);
+	background-repeat: no-repeat;
+	background-size: 45% ;
+	background-position: 15px 2px ;
+}
+
+
+
+
+/***************************************************
+********************* FOOTER ***********************
+***************************************************/
+
+footer{
+	width:100%;
+	max-width: 980px;
+	padding: 25px 0;
+	margin: auto;
+	overflow: hidden;
+}
+
+
+footer div {
+	width: 200px;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+	text-shadow: 0 0 2px #333;
+	left: 50%;
+	margin-left: -100px;
+	position: absolute;
+	bottom: 15px;
 }
 
