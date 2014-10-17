@@ -8,6 +8,9 @@
 	}
 
 	$path = "pages/".$page.".php";
+
+	//echo $path ."<br />";
+	//die();
 	if (file_exists($path)){
 		include($path);
 	}

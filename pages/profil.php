@@ -1,10 +1,16 @@
 <?php 
 	include ("inc/atop.php");
 	include ("inc/ahead.php");
-	include ("inc/header.php");
 	include ("inc/nav.php");
 	include ("inc/mainPro.php");
-	include ("inc/footer.php");
+	if (!empty($_GET['onglet'] == 'edit')){
+		include ("inc/profil/edit.php");
+	}elseif (!empty($_GET['onglet'] == 'view')){
+		include ("inc/profil/view.php");
+	}
+	elseif (!empty($_GET['onglet'] == 'dashboard')){
+		include ("inc/profil/dashboard.php");
+	}
 	include ("inc/zfoot.php");
 	include ("inc/zbottom.php");
 ?>

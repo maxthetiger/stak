@@ -3,6 +3,7 @@
 @import "../css/reset.css";
 
 
+
 #body{
 	background: #16a8d7; /* Old browsers */
 	font-family: arial;
@@ -156,6 +157,7 @@ input[type="submit"]{
 }
 
 #formulaire_container div #forget .forget_click{
+
 	margin-left: 10px;
 	color: #333;
 	font-size: 12px;

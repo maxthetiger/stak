@@ -12,28 +12,28 @@ Couleurs
 ********* HOME *********
 ***********************/
 
-	Header
+	Header		ahead
 		Logo
 		Barre de recherche
 		si pas connecté | Sign in | si connecté | Mon compte
 		si pas connecté | Sign up | si connecté | Log out
 
-	Nav
+	Nav			nav
 		Fil des questions
 		Tutos
 		Carriere
 		Actus et evenements
 
-	Aside
+	Aside		aside
 		Bloc (Rejoins nous) si pas connecté
 		Bloc événements et actus
 
-	Main 
+	Main 		mainHome
 		Articles * 3
 			Titre
 			Tags
 
-	Footer
+	Footer		zfoot
 		Mentions légales
 		Copyright
 
@@ -45,23 +45,23 @@ Couleurs
 ***********************/
 
 
-	Header
+	Header		ahead
 		Logo
 		Barre de recherche
 		si pas connecté | Sign in | si connecté | Mon compte
 		si pas connecté | Sign up | si connecté | Log out
 
-	Nav
+	nav 		nav
 		Fil des questions
 		Tutos
 		Carriere
 		Actus et evenements
 
-	Aside
+	aside 		aside
 		Bloc (Rejoins nous) si pas connecté
 		Bloc événements et actus
 
-	Main 
+	Main 		mainDe
 		Articles * 1
 			Titre
 			Note
@@ -71,7 +71,7 @@ Couleurs
 			Reponses
 			Comment Reponses
 
-	Footer
+	Footer		zfoot
 		Mentions légales
 		Copyright
 
@@ -82,10 +82,10 @@ Couleurs
 ***********************/
 
 
-	Header
+	Header		ahead
 		Logo
 		
-	Main 
+	Main 		mainReg
 		Formulaire Sign in
 			Pseudo	||  Email
 			MDP
@@ -100,7 +100,7 @@ Couleurs
 			MDP
 			Submit
 
-	Footer
+	Footer		zfoot
 		Mentions légales
 		Copyright
 
@@ -112,34 +112,51 @@ Couleurs
 ******** PROFIL ********
 ***********************/
 
-	Header
+	Header		ahead
 		Logo
 		Barre de recherche
 		si pas connecté | Sign in | si connecté | Mon compte
 		si pas connecté | Sign up | si connecté | Log out
 
-	Nav
+	nav 		nav
 		Fil des questions
 		Tutos
 		Carriere
 		Actus et evenements
 
-	Main 
+	Main 		mainPro
 		Header
 			Avatar
 			Pseudo
 			Score
 		Nav
 			Edit profil
+				Formulaire Profil
+					nom
+					prenom
+					ville
+					pays
+					langue
+					metier
+					avatar
+					webSite
+					github
 			View profil
 			Dashboard
 				Trier mes articles ( question, réponses, commentaires favoris)
 				Creer un article
 				Fil des articles
 
-	Footer
+	Footer		zfoot
 		Mentions légales
 		Copyright
+
+
+
+
+
+
+
 
 
 MISE EN PAGE DETAILLEE
