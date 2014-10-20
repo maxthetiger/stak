@@ -19,7 +19,7 @@
 // 	// }->getMessage()
 
 $user = 'root';
-$password = 'roo55t';
+$password = 'root';
 $db = 'stackode';
 $host = 'localhost';
 $port = 8889;
@@ -33,3 +33,4 @@ $success = mysqli_real_connect(
    $db,
    $port
 );
+// echo $success;
