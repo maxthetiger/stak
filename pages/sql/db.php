@@ -18,19 +18,18 @@
 // 		echo 'Erreur de connexion : ' . $e;}
 // 	// }->getMessage()
 
-$user = 'root';
-$password = 'root';
-$db = 'stackode';
-$host = 'localhost';
-$port = 8889;
+// $user = 'root';
+// $password = 'root';
+// $db = 'stackode';
+// $host = 'localhost';
+// $port = 8889;
 
-$link = mysqli_init();
-$success = mysqli_real_connect(
-   $link, 
-   $host, 
-   $user, 
-   $password, 
-   $db,
-   $port
-);
-// echo $success;
+// $link = mysqli_init();
+// $success = mysqli_real_connect(
+//    $link, 
+//    $host, 
+//    $user, 
+//    $password, 
+//    $db,
+//    $port
+// );
