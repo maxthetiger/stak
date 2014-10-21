@@ -1,4 +1,4 @@
-<div id="mainHome">
+<section id="mainHome">
 	<h1>Les derniers articles</h1>
 
 	<article id="artOne">
@@ -12,4 +12,4 @@
 	<article id="artThree">
 		<a href="?page=register">register</a>
 	</article>
-</div>
+</section>

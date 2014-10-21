@@ -1,0 +1,19 @@
+suppr art rep
+art comment
+comment rep
+					OK
+rep --> id art
+					OK
+coment -->
+id coment
+comment
+date x2
+id art
+id users
+bool -> type comrep
+					OK
+dans users / profil
+suppr ville pays --> location
+suppr nom prenom fav
+add details (textarea)
+					OK

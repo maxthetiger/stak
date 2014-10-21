@@ -1,48 +1,33 @@
-/************************
- * 	 	Modules			*
- ************************/
+// Window load event used just in case window height is dependant upon images
+$(window).bind("load", function() { 
+       
+       var footerHeight = 0,
+           footerTop = 0,
+           $footer = $("#footer");
+           
+       positionFooter();
+       
+       function positionFooter() {
+       
+                footerHeight = $footer.height();
+                footerTop = ($(window).height()-footerHeight)+"px";
+       
+               if ( ($(document.body).height()+footerHeight) < $(window).height()) {
+                   $footer.css({
+                        position: "absolute"
+                   }).animate({
+                        bottom: 0,
+                   })
+               } else {
+                   $footer.css({
+                        position: "static"
+                   })
+               }
+               
+       }
 
-ModulA = {
-
-	init: function() {
-
-	},
-
-	fonction1: function() {
-
-	}
-
-}
-
-
-
-/************************
-*						*
-*	Objet Principal	*
-*						*
-************************/
-
-
-app = {
-	
-	/*
-	 * Chargement du DOM
-	 */
-	init: function() {
-
-		// On lance le ModulA
-		ModulA.init()
-
-	}
-
-}
-
-/************************
-*						*
-*	Chargement du DOM	*
-*						*
-************************/
-
-$(function (){
-	app.init()
-})
+       $(window)
+               .scroll(positionFooter)
+               .resize(positionFooter)
+               
+});

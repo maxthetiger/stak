@@ -1,12 +1,13 @@
-<div id="mainPro">
-	<header id="headPro">
-		<div id="avatar"></div>
-		<div id="pseudo"></div>
-		<div id="Score"></div>
-	</header>
+<section id="mainPro">
 	<nav id="navPro">
-		<a href="?page=profil&onglet=edit">edit profil</a>
-		<a href="?page=profil&onglet=view">view profil</a>
-		<a href="?page=profil&onglet=dashboard">tableau de bord</a>
+		<div class="edit">
+			<a href="?page=profil&onglet=edit">edit</a>
+		</div>
+		<div class="view">
+			<a href="?page=profil&onglet=view">view</a>
+		</div>
+		<div class="dash">
+			<a href="?page=profil&onglet=dashboard">dashboard</a>
+		</div>
 	</nav>
-</div>
+</section>
