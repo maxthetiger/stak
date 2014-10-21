@@ -1,0 +1,13 @@
+faire une table note ou on stocke le id user 
+les points 
+le pourquoi lui a été attribué ce point
+
+
+virer nom
+et prenom du profil
+
+mettre un détails ou champs de texte
+mettre ville et pays en un seul truc
+virer les langues
+
+ajouter age ?

@@ -1,0 +1,77 @@
+/** RESET CSS **/
+/* @import "normalize.css" ou reset */
+@import "../css/reset.css";
+
+ /* #16a8d7; */
+
+#body{
+	background: #fff;
+	font-family: arial;
+}
+
+
+#header,
+footer
+{
+	width:100%;
+	max-width: 980px;
+	padding: 25px 0;
+	margin: auto;
+	overflow: hidden;
+}
+
+#header{
+	border: 1px solid black;
+}
+
+#header #logo{
+	background-image: url(../img/logo.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	width: 200px;
+	height: 120px;
+	float: left;
+}
+
+#header .connexion {
+	clear: right;
+	float: right;
+	text-align: center;
+	margin-bottom: 15px;
+	width: 100px;
+	padding: 10px 0;
+	background-color: #16a8d7;
+	border: 1px solid #16a8d7;
+	color: #fff;
+	text-decoration: none;
+}
+
+#header .connexion:hover {
+	background-color: #fff;
+	color: #16a8d7;
+	border: 1px solid #16a8d7;
+}
+
+#header .connexion:hover:before {
+	content: "< ";
+}
+
+#header .connexion:hover:after {
+	content: " >";
+}
+
+/***************************************************
+********************* FOOTER ***********************
+***************************************************/
+
+footer div {
+	width: 200px;
+	text-align: center;
+	color: #16a8d7;
+	font-size: 12px;
+	left: 50%;
+	margin-left: -100px;
+	position: absolute;
+	bottom: 15px;
+}
+
