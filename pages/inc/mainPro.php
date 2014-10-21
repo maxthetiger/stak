@@ -1,4 +1,4 @@
-<section id="mainPro">
+<div id="mainPro">
 	<header id="headPro">
 		<div id="avatar"></div>
 		<div id="pseudo"></div>
@@ -9,4 +9,4 @@
 		<a href="?page=profil&onglet=view">view profil</a>
 		<a href="?page=profil&onglet=dashboard">tableau de bord</a>
 	</nav>
-</section>
+</div>

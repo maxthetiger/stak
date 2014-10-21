@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  127.0.0.1
--- Généré le :  Ven 17 Octobre 2014 à 10:56
+-- Généré le :  Mar 21 Octobre 2014 à 10:41
 -- Version du serveur :  5.6.16
 -- Version de PHP :  5.5.11
 
@@ -40,19 +40,6 @@ CREATE TABLE IF NOT EXISTS `article` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `article_reponse`
---
-
-CREATE TABLE IF NOT EXISTS `article_reponse` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_article` int(11) NOT NULL,
-  `id_reponse` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `article_tags`
 --
 
@@ -74,33 +61,9 @@ CREATE TABLE IF NOT EXISTS `comment` (
   `comment` text NOT NULL,
   `dateCreated` datetime NOT NULL,
   `dateModified` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `comment_article`
---
-
-CREATE TABLE IF NOT EXISTS `comment_article` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_comment` int(11) NOT NULL,
-  `id_article` int(11) NOT NULL,
   `id_users` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `comment_reponse`
---
-
-CREATE TABLE IF NOT EXISTS `comment_reponse` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_comment` int(11) NOT NULL,
-  `id_reponse` int(11) NOT NULL,
+  `id_article` int(11) NOT NULL,
+  `typeComRep` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
@@ -120,31 +83,6 @@ CREATE TABLE IF NOT EXISTS `favoris` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `profil`
---
-
-CREATE TABLE IF NOT EXISTS `profil` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nom` varchar(255) NOT NULL,
-  `prenom` varchar(255) NOT NULL,
-  `ville` varchar(255) NOT NULL,
-  `pays` varchar(255) NOT NULL,
-  `langue` varchar(255) NOT NULL,
-  `metier` varchar(255) NOT NULL,
-  `avatar` int(11) NOT NULL,
-  `webSite` varchar(255) NOT NULL,
-  `github` varchar(255) NOT NULL,
-  `score` int(11) NOT NULL,
-  `status` tinyint(1) NOT NULL,
-  `dateCreated` datetime NOT NULL,
-  `dateModified` datetime NOT NULL,
-  `id_users` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `reponse`
 --
 
@@ -156,6 +94,7 @@ CREATE TABLE IF NOT EXISTS `reponse` (
   `dateCreated` datetime NOT NULL,
   `dateModified` datetime NOT NULL,
   `id_users` int(11) NOT NULL,
+  `id_article` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
@@ -168,8 +107,6 @@ CREATE TABLE IF NOT EXISTS `reponse` (
 CREATE TABLE IF NOT EXISTS `tags` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
-  `dateCreated` datetime NOT NULL,
-  `dateModified` datetime NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
@@ -186,7 +123,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `pwd` varchar(255) NOT NULL,
   `salt` varchar(50) NOT NULL,
   `token` varchar(50) NOT NULL,
-  `favoris` int(11) NOT NULL,
+  `location` varchar(255) NOT NULL,
+  `metier` varchar(255) NOT NULL,
+  `avatar` int(11) NOT NULL,
+  `webSite` varchar(255) NOT NULL,
+  `github` varchar(255) NOT NULL,
+  `score` int(11) NOT NULL,
+  `status` tinyint(1) NOT NULL,
+  `details` text NOT NULL,
   `dateCreated` datetime NOT NULL,
   `dateModified` datetime NOT NULL,
   `isActive` tinyint(1) NOT NULL,
