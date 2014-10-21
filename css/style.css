@@ -545,6 +545,8 @@ body #mainPro
 #navPro
 {
 	float: right;
+	position: relative;
+	bottom: -1px;
 
 }
 #navPro a
@@ -559,13 +561,39 @@ body #mainPro
 #navPro .edit,
 #navPro .view
 {
+	padding-top: 2px;
 	width: 120px;
 	height: 30px;
 	background-color: #16a8d7;
+	border: 1px solid #16a8d7;
 	border-radius: 10px 10px 0 0;
 	display: inline-block;
 	text-align: center;
 	line-height: 2;
+}
+
+
+#navPro .dash.active,
+#navPro .edit.active,
+#navPro .view.active
+{
+	width: 120px;
+	height: 30px;
+	background-color: #FFF;
+	border: 1px solid #16a8d7;
+	border-radius: 10px 10px 0 0;
+	display: inline-block;
+	text-align: center;
+	line-height: 2;
+}
+#navPro .dash.active a,
+#navPro .edit.active a,
+#navPro .view.active a
+{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #16a8d7;
+	font: 700 1em arial;
 }
 
 

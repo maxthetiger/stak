@@ -31,3 +31,55 @@ $(window).bind("load", function() {
                .resize(positionFooter)
                
 });
+
+
+app = {
+
+  /*
+   * Chargement du DOM
+   */
+  init: function() {
+
+    // Autocompletion d'adresse
+    this.adresses()
+
+  },
+
+
+  /*
+   * Autocomplete du champ adresse
+   */
+  adresses: function() {
+
+    // On choppe notre input
+    var input = document.getElementById("location")
+
+    // Paramètres
+    var options = {
+      types: ['(cities)'],
+    }
+
+    // On ajoute l'autocomplete
+    var autocomplete = new google.maps.places.Autocomplete(input, options)
+
+    // Lors de la sélection d'adresse, on récupère les coordonnées
+    google.maps.event.addListener(autocomplete, 'place_changed', function() {
+
+      // On récupère
+      var loc = autocomplete.getPlace().geometry.location
+
+      // On traduit l'info dans un objet compréhensible par OpenWeather
+      var data = {
+        lat: loc.lat(),
+        lon: loc.lng()
+      }
+    })
+  },
+}
+
+/*
+ * Chargement du DOM
+ */
+$(function() {
+  app.init()
+})

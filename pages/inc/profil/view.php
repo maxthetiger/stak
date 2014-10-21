@@ -11,7 +11,7 @@
 				</div>
 				<div id="score">5,376</div>
 				<div class="infos_small" id="location">Paris, France</div>
-				<div class="infos_small">Mangeur de Gauffre</div>
+				<div class="infos_small" id="work">Mangeur de Gauffre</div>
 				<div class="urls">
 					<span class="link">Github :</span>
 					<span class="link_url">http://blablacar.com</span>
