@@ -10,6 +10,7 @@
 			<link rel="stylesheet" href="css/style.css">
 			<link rel="stylesheet" href="css/profil_style.css">
 			<link rel="stylesheet" href="css/jquery-ui.min.css">
+
 	</head>
 	<!-- Fin En-tête -->
 

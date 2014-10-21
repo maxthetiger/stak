@@ -1,4 +1,7 @@
-<div id="formulaire_container">
-	<div id="profilDash">
-	</div>	
+<div id="main_container">
+	<div id="info_profil" class="container">
+		<div id="fiche">
+			 
+		</div>
+	</div>
 </div>
