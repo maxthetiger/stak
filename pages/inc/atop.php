@@ -15,7 +15,7 @@
 	<!-- Fin En-tête -->
 
 <?php 
-if (!empty($page) && ($page == "register" || $page == "reset") ) {
+if (!empty($page) && ($page == "register" || $page == "reset" || $page == "question" ) ) {
 		echo '<body id="body_blue">';
 	} else { echo '<body id="body">';} 
 ?>

@@ -63,7 +63,7 @@ input[type="submit"]{
 	position: relative;
 	top: 30px;
 	margin-bottom: 10px;
-	width: 80px;
+	width: 95px;
 	padding:  4px 0;
 	background-color: #16a8d7;
 	border: 1px solid #16a8d7;
@@ -200,7 +200,9 @@ input[type="submit"]{
 /***************************************************
 ********************** NAV  ************************
 ***************************************************/
-
+#nav_n{
+	display: none;
+}
 
 #nav{
 	width: 100%;
@@ -288,6 +290,16 @@ input[type="submit"]{
 	border-radius: 10px;
 	overflow: hidden;
 }
+
+#formulaire_container #question{
+	width: 80%;
+	margin: auto;
+	background-color: rgba(0, 0, 0, 0.1);
+	padding: 5px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
 
 #profilEdit #avatar{
 	width: 80%;
@@ -393,6 +405,12 @@ input[type="submit"]{
 {
 	height: 6em;
 }
+
+
+#formulaire_container div  #qArea{
+	height: 20em;
+}
+
 #formulaire_container div form select{
 	padding-left: 33%;
 }

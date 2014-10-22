@@ -1,8 +1,17 @@
 <header>
 	<div id="header">
 		<a href="index.php"><div id="logo"></div></a>
-			<a href="?page=register" class="connexion">Sign up</a>
-			<a href="?page=register" class="connexion">Sign in</a>
+
+		<?php if (userIsLogged()): ?>
+				<a href="?page=logout" class="connexion">Logout</a>
+				<a href="?page=profil" class="connexion">Mon profil</a>
+		<?php endif; ?>
+
+		<?php if (!userIsLogged()): ?>
+				<a href="?page=register" class="connexion">Sign up</a>
+				<a href="?page=register" class="connexion">Sign in</a>
+		<?php endif; ?>
+			
 		<div id="search">
 			<form>
 				<div id="searchbar">
