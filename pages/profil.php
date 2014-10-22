@@ -10,12 +10,14 @@
 			include ("inc/profil/edit.php");
 		} elseif (!empty($_GET['onglet'] == 'view')){
 			include ("inc/profil/view.php");
-		} elseif (!empty($_GET['onglet'] == 'dash')){
-			include ("inc/profil/dashboard.php");
+		}
+		else { include ("inc/profil/view.php");
 		}
 	}
-		else { include ("inc/profil/dashboard.php");
-		}
+	else {
+		include ("inc/profil/view.php");
+	}
+
 
 	include ("inc/zfoot.php");
 	include ("inc/zbottom.php");

@@ -41,7 +41,7 @@ header
 	position: relative;
 	top: 30px;
 	margin-bottom: 10px;
-	width: 80px;
+	width: 95px;
 	padding:  4px 0;
 	background-color: #16a8d7;
 	border: 1px solid #16a8d7;
@@ -62,7 +62,7 @@ header
 	position: relative;
 	left: -25px;
 	top: -1px;
-    transition: all 0.2s ease-in; 
+    transition: all 0.3s ease-in; 
 
 }
 
@@ -71,7 +71,7 @@ header
 	position: relative;
 	right: -25px;
 	top: -1px;
-    transition: all 0.2s ease-in; 
+    transition: all 0.3s ease-in; 
 
 }
 

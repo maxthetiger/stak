@@ -1,4 +1,5 @@
-<?php include ("pages/php/validation_register.php");
+<?php 
+	include ("pages/php/validation_register.php");
 	include ("pages/php/validation_login.php");
 	include ("pages/php/validation_newPassword_01.php"); ?>
 
