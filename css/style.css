@@ -16,6 +16,9 @@
 
 input[type="submit"]{
 	cursor: pointer;
+	background-color: #FFF;
+	color: #16a8d7;
+	width: 30%;
 }
 
 #formulaire_container {

@@ -52,7 +52,7 @@
 
 		global $dbh;
 		$sql = "UPDATE users 
-				SET password = :password,
+				SET pwd = :password,
 					dateModified = NOW()
 				WHERE email = :email 
 				AND token = :token";

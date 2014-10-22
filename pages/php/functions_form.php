@@ -113,10 +113,11 @@
 		$stmt->execute();
 		$userFound = $stmt->fetch();
 
-	}
+		return $userFound;
+	} 
 
 
-	function passwordValidate($password_bis, $password){
+/*	function passwordValidate($password_bis, $password){
 
 		global $dbh;
 
@@ -135,7 +136,7 @@
 		}
 		return $errors;
 
-	}
+	}*/
 
 
 
@@ -185,8 +186,8 @@
         //le message
 			// URGENT
 			// Trouver le lien de la page
-           // $resetUrl = "http://localhost/stak/index.php?page=reset&email="
-            $resetUrl = "http://localhost/stak/index.php/pages/reset.php?email="
+           $resetUrl = "localhost/CA/10-Octobre/Semaine2/5-Projetstak/stak/index.php?page=reset&email="
+            //$resetUrl = "http://localhost/stak/index.php/pages/reset.php?email="
              . urlencode($email) . '&token=' . urlencode($token);
 
             //le sujet

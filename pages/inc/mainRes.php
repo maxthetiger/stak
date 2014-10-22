@@ -13,10 +13,8 @@
 	}
 
 	if ($token && $email){
-		resetGoodUser($email, $token);
+		$userFound = resetGoodUser($email, $token);
 	}
-
-
 	if (empty($userFound)){
 		die("oops");
 	}
@@ -26,7 +24,8 @@
 	//déclaration des variables du formulaire
 	$password		= "";
 	$password_bis 	= "";
-
+	$email			= $userFound['email'];
+	$token			= $userFound['token'];
 	$errors_new = array();
 
 	//formulaire soumis ?
@@ -55,7 +54,6 @@
 		if (empty($errors)){
 
 			updateNewPassword($email, $token, $password);
-			
 		}
 	}
 ?>
