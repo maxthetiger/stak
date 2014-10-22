@@ -186,6 +186,27 @@ header
 }
 
 
+#main_container input[type="submit"]{
+	cursor: pointer;
+	background-color: #16a8d7;
+	border: 1px solid #FFF;
+	color: #FFF;
+	width: 30%;
+	float: right;
+	padding: 5px 0;
+	margin-top: 15px;
+}
+
+#main_container input[type="submit"]:hover{
+	cursor: pointer;
+	background-color: #FFF;
+	color: #16a8d7;
+	width: 30%;
+	float: right;
+	padding: 5px 0;
+	margin-top: 15px;
+}
+
 #main_container input,
 #main_container textarea{
 	border: none;
@@ -198,11 +219,17 @@ header
 	font-family: verdana;
 }
 
+#main_container label {
+	font-weight: 700;
+	font-size: 1em;
+	color: #FFF;
+
+}
+
+
 #main_container input[type="file"]
 {
-	width: 80%;
-	padding-left: 0;
-	background-color: #16a8d7;
+	display: none;
 }
 
 #main_container  #fiche .left #avatar {
