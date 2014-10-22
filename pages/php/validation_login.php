@@ -2,12 +2,11 @@
 
 	session_start();
 
-	include("db.php");
 	include("functions.php");
 
 	//déclaration des variables du formulaire
-	$username 		= "";
-	$password 		= "";
+	$login 		= "";
+	$password	= "";
 
 	$errors = array();
 
@@ -16,47 +15,30 @@
 
 		//on écrase les valeurs définies ci-dessus, tout en se protegeant
 		//pas de strip tags sur la password par contre (si la personne veut mettre des balises dans son pw, c'est son affaire, et on le hache anyway)
-		$username 		= strip_tags($_POST['username']);
-		$password 		= $_POST['password'];
+		$login 		= strip_tags($_POST['login']);
+		$password 		= $_POST['pwd'];
+
 
 		//validation
 
-		//username
-		if (empty($username)){
-			$errors[] = "Please provide an username !";
+	//login
+		if (empty($login)){
+			$errors[] = "Veuillez entrer votre identifiant !";
 		}
 
-		//password
+	//password
 		if (empty($password)){
-			$errors[] = "Please choose a password !";
+			$errors[] = "Veuillez entrer un password !";
 		}
 
-		//form valide ?
-		if (empty($errors)){
-			
-			//recherche l'utilisateur en bdd par son username (ou email)
-			$sql = "SELECT * FROM users
-					WHERE username = :login OR email = :login
-					LIMIT 1";
+	//form valide ?
+	if (empty($errors)){
 
-			$stmt = $dbh->prepare($sql);
-			$stmt->bindValue(":login", $username);
-			$stmt->execute();
+		$login = $login;
+		$password = $password
 
-			$user = $stmt->fetch();
-
-			$hashedPassword = hashPassword($password, $user['salt']);
-			if ($hashedPassword === $user['password']){
-				$_SESSION['user'] = $user;
-				header("Location: index.php");
-				die();
-			}
-		}
+		login_connexion($login, $password);
 	}
-?>
+}
 
-<?php include("inc/top.php"); ?>
-<div class="container">
-<?php include("inc/login_form.php"); ?>
-</div>
-<?php include("inc/bottom.php"); ?>
+?>
