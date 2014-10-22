@@ -2,7 +2,6 @@
 	<div id="infos_profil" class="container">
 		<div id="fiche">
 			<div class="left" id="profil_img">
-				<img src="http://www.catsthatlooklikehitler.com/kitler/pics/kitler1927.jpg">
 				<div id="pseudo_profil">Maxthetiger 
 					<div id="status">
 						<span class="in">In</span> | 
@@ -10,8 +9,11 @@
 					</div>
 				</div>
 				<div id="score">5,376</div>
-				<div class="infos_small" id="location">Paris, France</div>
-				<div class="infos_small" id="work">Mangeur de Gauffre</div>
+				<div class="infos_small" id="locate">Paris, France</div>
+				<div class="infos_small" id="work">Mangeur de Gaufres</div>
+				<span id="avatar">
+					<img src="http://www.catsthatlooklikehitler.com/kitler/pics/kitler1927.jpg">
+				</span>
 				<div class="urls">
 					<span class="link">Github :</span>
 					<span class="link_url">http://blablacar.com</span>
@@ -22,7 +24,7 @@
 				</div>
 			</div>
 
-			<div class="left" id="profil_info">
+			<div class="right" id="profil_info">
 				<header>Description</header>
 				<div>
 					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -33,6 +35,19 @@
 					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</div>
 			</div>
+		</div>
+		<div id="reponses" class="left">
+			<header class="header_section"><span class="nombre">115</span>Réponses</header>
+			<main class="main">
+				<ul>
+					<li><a href="">Réponse à la question 1</a></li>
+					<li><a href="">Comment allumer la lumière</a></li>
+					<li><a href="">Je n'ai vraiment pas d'idée</a></li>
+					<li><a href="">Réunion sur le site lundi</a></li>
+					<li><a href="">Envie de dormir un peu</a></li>
+				</ul>
+			</main>
+			<div class="more"><a href="">>> i++</a></div>
 		</div>
 
 		<div id="questions" class="left">
@@ -49,15 +64,15 @@
 			<div class="more"><a href="">>> i++</a></div>
 		</div>
 
-		<div id="reponses" class="left">
-			<header class="header_section"><span class="nombre">115</span>Réponses</header>
+		<div class="left">
+			<header class="header_section"><span class="nombre">5,376</span>Points</header>
 			<main class="main">
 				<ul>
-					<li><a href="">Réponse à la question 1</a></li>
-					<li><a href="">Comment allumer la lumière</a></li>
-					<li><a href="">Je n'ai vraiment pas d'idée</a></li>
-					<li><a href="">Réunion sur le site lundi</a></li>
-					<li><a href="">Envie de dormir un peu</a></li>
+					<li><a href=""><span>+5</span> Réponse à la question 1</a></li>
+					<li><a href=""><span>+2</span> Comment allumer la lumière</a></li>
+					<li><a href=""><span>+50</span> Best reponse à la question</a></li>
+					<li><a href=""><span>+2</span> Difficile de compter tout ces points</a></li>
+					<li><a href=""><span>-2</span> Tu as voter contre moi vilain !</a></li>
 				</ul>
 			</main>
 			<div class="more"><a href="">>> i++</a></div>
@@ -72,19 +87,6 @@
 					<li><a href="">Vive le pop-corn</a></li>
 					<li><a href="">Il est mignon Mr. Pignon</a></li>
 					<li><a href="">Voici mon préféré</a></li>
-				</ul>
-			</main>
-			<div class="more"><a href="">>> i++</a></div>
-		</div>
-		<div class="left">
-			<header class="header_section"><span class="nombre">5,376</span>Points</header>
-			<main class="main">
-				<ul>
-					<li><a href=""><span>+5</span> Réponse à la question 1</a></li>
-					<li><a href=""><span>+2</span> Comment allumer la lumière</a></li>
-					<li><a href=""><span>+50</span> Best reponse à la question</a></li>
-					<li><a href=""><span>+2</span> Difficile de compter tout ces points</a></li>
-					<li><a href=""><span>-2</span> Tu as voter contre moi vilain !</a></li>
 				</ul>
 			</main>
 			<div class="more"><a href="">>> i++</a></div>

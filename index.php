@@ -2,7 +2,7 @@
 	session_start();
 		include ("pages/functions.php");
 
-	$page = "home";
+	$page = "HOME";
 	if (!empty($_GET['page'])){
 		$page = $_GET['page'];
 	}
