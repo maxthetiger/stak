@@ -20,8 +20,8 @@
 				<p>Connexion</p>
 			</header>
 
-			<input type="text" name="pseudo" placeholder="Pseudo / Email">
-			<input type="password" name="pwd_1" placeholder="Votre password">
+			<input type="text" name="login" placeholder="Pseudo / Email">
+			<input type="password" name="pwd" placeholder="Votre password">
 			<input type="submit" value="me connecter">
 		</form>
 	</div>

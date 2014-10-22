@@ -20,9 +20,59 @@
 		$stmt->bindValue(":token", $token);
 
 		$stmt->execute();
+		$user = $stmt->fetchAll();
+
 		//@guillaume : rediriger vers le formulaire de login
 
-		$_SESSION['user'] = $pseudo;
-		header("Location: profil.php");
-		die();
+		//possibilité d'éffectuer un fetchAll pour pouvoir initier sa session
+		sessionStart($user);
 	}
+
+
+
+				/**************************************
+				**************** RESET ****************
+				**************************************/
+
+
+	function updateNewPassword($email, $token, $password){
+
+		$sql = "UPDATE users 
+				SET password = :password,
+					dateModified = NOW()
+				WHERE email = :email 
+				AND token = :token";
+
+			$stmt = $dbh->prepare($sql);
+			$stmt->bindValue(":password", hashPassword($password, $user['salt']));
+			$stmt->bindValue(":email", $email);
+			$stmt->bindValue(":token", $token);
+
+			if ($stmt->execute()){
+
+				updateNewToken($email);
+
+			}
+	}
+
+
+	function updateNewToken($email){
+
+		$sql = "UPDATE users 
+						SET token = :token,
+							dateModified = NOW()
+						WHERE email = :email";
+
+				$stmt = $dbh->prepare($sql);
+				$stmt->bindValue(":token", randomString());
+				$stmt->bindValue(":email", $email);
+
+				if ($stmt->execute()){
+
+					sessionStart($user);
+					
+				}
+
+	}
+
+
