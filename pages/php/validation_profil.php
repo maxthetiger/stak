@@ -25,6 +25,6 @@
 
 		$stmt->execute();
 
-		$user = $stmt->fetchAll();
+		$user = $stmt->fetch();
 	}
 ?>
