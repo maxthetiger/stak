@@ -1,5 +1,7 @@
 <?php
-
+    function toto() {
+        echo "test";
+    }
     function sendResetPassword($email, $pseudo, $token){
         include("phpMailer/PHPMailerAutoload.php"); //chargera les fichiers nécessaires
 
@@ -28,7 +30,7 @@
         //le message
 // URGENT
 // Trouver le lien de la page
-            $resetUrl = "http://localhost/stak/password_reset_2.php?email="
+            $resetUrl = "http://localhost/stak/index.php?page=reset&email="
              . urlencode($email) . '&token=' . urlencode($token);
 
                                    //le sujet

@@ -3,11 +3,16 @@
 @import "../css/reset.css";
 
 
-
 #body{
+	background: #fff;
+	font-family: arial;
+}
+
+#body_blue{
 	background: #16a8d7; /* Old browsers */
 	font-family: arial;
 }
+
 
 input[type="submit"]{
 	cursor: pointer;

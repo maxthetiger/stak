@@ -1,19 +1,15 @@
 <?php
 	
-	// on démarre la session
-	session_start();
 
-	// on include les functions
-	include("functions.php");
+	
+	//formulaire soumis ?
+	if (!empty($_POST) && $_POST['form'] == "remember"){
 
 	//déclaration des variables du formulaire
 	$email 		= "";
-	$errors = array();
+	$errors_f = array();
 
-	//formulaire soumis ?
-	if (!empty($_POST)){
-
-		$email = strip_tags($_POST['email']);
+		$email = strip_tags($_POST['email_f']);
 
 		resetPassword($email);
 	}

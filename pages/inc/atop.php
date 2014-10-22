@@ -14,4 +14,8 @@
 	</head>
 	<!-- Fin En-tête -->
 
-<body id="body">
+<?php 
+if (!empty($page) && ($page == "register" || $page == "reset") ) {
+		echo '<body id="body_blue">';
+	} else { echo '<body id="body">';} 
+?>

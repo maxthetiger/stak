@@ -9,6 +9,8 @@
 
 	function sessionStart($user){
 
+		global $dbh;
+
 		//log the user automatically
 		$_SESSION['user'] = $user;
 		header("Location: index.php");
@@ -18,6 +20,9 @@
 
 	// on test la session pour savoir si elle est vide
 	function userIsLogged(){
+		
+		global $dbh;
+
 		if (!empty($_SESSION['user'])){
 			return true;
 		}
@@ -96,6 +101,8 @@
 	//On valide la tentative de connexion
 	function login_connexion($login, $password){
 		
+		global $dbh;
+
 		//recherche l'utilisateur en bdd par son username (ou email)
 		$sql = "SELECT * FROM users
 				WHERE pseudo = :login OR email = :login
@@ -108,11 +115,12 @@
 		$user = $stmt->fetch();
 
 		$hashedPassword = hashPassword($password, $user['salt']);
-		if ($hashedPassword === $user['password']){
+		if ($hashedPassword === $user['pwd']){
 
 			sessionStart($user);
 		}
 
+	}
 
 
 				/**************************************
@@ -122,6 +130,7 @@
 
 	function resetGoodUser($email, $token){
 
+		global $dbh;
 
 		//vérifier que les données dans l'url sont valides
 		$sql = "SELECT * FROM users
@@ -130,12 +139,14 @@
 		$stmt->bindValue(":email", $email);
 		$stmt->bindValue(":token", $token);
 		$stmt->execute();
-		$user = $stmt->fetch();
+		$userFound = $stmt->fetch();
 
 	}
 
 
 	function passwordValidate($password_bis, $password){
+
+		global $dbh;
 
 		//password
 		if (empty($password)){
@@ -150,7 +161,7 @@
 		elseif (strlen($password) < 7){
 			$errors[] = "Votre password doit comporter au minmum 7 caractères !";
 		}
-
+		return $errors;
 
 	}
 
@@ -158,6 +169,8 @@
 
 	function resetPassword($email){
 
+		global $dbh;
+		
 		//vérifier que l'email existe bel et bien
 		$sql = "SELECT email, pseudo, token FROM users
 				WHERE email = :email";
@@ -173,13 +186,49 @@
 			$token	= $user['token'];
 			$pseudo	= $user['pseudo'];
 
-			//envoyer un message
-			sendResetPassword($email, $pseudo, $token);
+		include("phpMailer/PHPMailerAutoload.php"); //chargera les fichiers nécessaires
 
-		}
+        $mail = new PHPMailer();        //Crée un nouveau message (Objet PHPMailer)
+        $mail->CharSet = 'UTF-8';       //Encodage en utf8
+
+        //INFOS DE CONNEXION
+        $mail->isSMTP();                                    //On utilise SMTP
+        $mail->Username = "machinchoseformation@gmail.com"; //nom d'utilisateur
+        $mail->Password = "38Utc_Sd5KdI4sz0Gr2Y4g";         //mot de passe
+        $mail->Host = 'smtp.mandrillapp.com';               //smtp.gmail.com pour gmail
+        $mail->Port = 587;                                  //Le numéro de port
+        $mail->SMTPAuth = true;                             //On utilise l'authentification SMTP ?
+        //$mail->SMTPSecure = 'tls';                        //décommenter pour gmail
+
+        //CONFIGURATION DES PERSONNES
+        $mail->setFrom('account@stackode.com', 'Stackode !');                   //qui envoie ce message ? (email, noms)
+        $mail->addReplyTo('account@stackode.com', 'Stackode !');        //à qui répondre si on clique sur "reply" (email, noms)
+        $mail->addAddress($user['email'], $user['pseudo']);   //destinataire
+        
+        //CONFIGURATION DU MESSAGE
+        $mail->isHTML(true);                                // Contenu du message au format HTML
+        $mail->Subject = 'Réinitialisation de password sur Stackode !';         
+        
+
+        //le message
+			// URGENT
+			// Trouver le lien de la page
+           // $resetUrl = "http://localhost/stak/index.php?page=reset&email="
+            $resetUrl = "http://localhost/stak/index.php/pages/reset.php?email="
+             . urlencode($email) . '&token=' . urlencode($token);
+
+            //le sujet
+            $mail->Body = 'Bonjour,<br /> Veuillez clicker sur le lien ci-dessous pour réinitialiser votre password:<br /><a href="'.$resetUrl.'">'.$resetUrl.'</a>';
+            
+        //envoie le message
+        if (!$mail->send()) {
+            echo "Mailer Error: " . $mail->ErrorInfo;
+        } else {
+            echo "Message envoyé!";
+        }
 	}
+}
 
 
 
-
-
+?>

@@ -1,15 +1,11 @@
 <?php
 
-	// on demarre la session
-	session_start();
 
-	// on include nos functions
-	include("functions.php");
 
 	// on recupere le get généré par le lien envoyé dans l'email
 	$email = "";
 	if (!empty($_GET['email'])){
-		$email = $_GET['email'];
+		$email = urldecode($_GET['email']);
 	}		
 	$token = "";
 	if (!empty($_GET['token'])){
@@ -21,7 +17,7 @@
 	}
 
 
-	if (empty($user)){
+	if (empty($userFound)){
 		die("oops");
 	}
 
@@ -42,10 +38,19 @@
 		$password_bis 		= $_POST['pwd_2'];
 
 
-		//password
-		passwordValidate($password_bis, $password);
-
-
+				//password
+		if (empty($password)){
+			$errors[] = "Veuillez entrer un password !";
+		}
+		elseif (empty($password_bis)){
+			$errors[] = "Veuillez confirmer votre password !";
+		}
+		elseif ($password_bis != $password){
+			$errors[] = "Vos passwords ne sont pas identiques !";
+		}
+		elseif (strlen($password) < 7){
+			$errors[] = "Votre password doit comporter au minmum 7 caractères !";
+		}
 
 		if (empty($errors)){
 
