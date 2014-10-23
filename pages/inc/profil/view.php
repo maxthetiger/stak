@@ -1,11 +1,13 @@
+<?php $user = $_SESSION['user']; ?>
+
 <div id="main_container">
 	<div id="infos_profil" class="container">
 		<div id="fiche">
 			<div class="left" id="profil_img">
 				<span id="avatar">
-					<img src="<?php echo $value['avatar']; ?>">
+					<img src="avatar/<?php echo $user['avatar']; ?>">
 				</span>
-				<div id="pseudo_profil"><?php echo $value['pseudo']; ?>
+				<div id="pseudo_profil"><?php echo $user['pseudo']; ?>
 					<div id="status">
 						<span class="in">In</span> | 
 						<span class="out">Out</span>
@@ -13,28 +15,28 @@
 				</div>
 				<div id="score">5,376</div>
 				<div class="infos_small" id="locate">
-					<?php echo $value['location']; ?>
+					<?php echo $user['location']; ?>
 				</div>
 				<div class="infos_small" id="work">
-					<?php echo $value['metier']; ?>
+					<?php echo $user['metier']; ?>
 				</div>
 				<div class="urls">
 					<span class="link">Github :</span>
 					<span class="link_url">
-						<?php echo $value['github']; ?>
+						<?php echo $user['github']; ?>
 					</span>
 				</div>	
 				<div class="urls">
 					<span class="link">Website :</span>
 					<span class="link_url">
-						<?php echo $value['webSite']; ?>
+						<?php echo $user['webSite']; ?>
 					</span>
 				</div>
 			</div>
 
 			<div class="right" id="profil_info">
 				<header>Description</header>
-				<div><?php echo $value['details']; ?></div>
+				<div><?php echo $user['details']; ?></div>
 			</div>
 		</div>
 		<div id="reponses" class="left">

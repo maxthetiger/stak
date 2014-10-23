@@ -288,6 +288,7 @@ header
 	height: 166px;
 	padding: 3px;
 	margin: -15px -10px;
+	text-align: center;
 }
 
 #main_container textarea::-webkit-scrollbar {
@@ -409,12 +410,14 @@ header
 
 #profil_info div{
 	color: #fff;
+	height: 140px;
 	padding: 15px 10px 5px;
 	text-transform: inherit;
 	font-weight: 400;
 	font-size: 15px;
 	line-height: 1.2em;
 	letter-spacing: 0.05em;
+	text-align: center;
 }
 
 #main_container .container #profil_img img{
@@ -464,6 +467,7 @@ header
 
 #main_container .container #profil_img #location {
 	margin-top: 10px;
+
 }
 
 #main_container .container #profil_img .infos_small {
@@ -523,7 +527,7 @@ header
 	width: calc(100% - 115px);
 	display: inline-block;
 	overflow: hidden;
-
+	height: 20px;
 }
 
 

@@ -1,13 +1,12 @@
 <?php	
 
-
-
 	function completeUserProfil($e_idUser, $pseudo, $location, $metier, $avatar, $webSite, $github, $details, $email) {
 
-		global $dbh;
-		$sql = "UPDATE users
-				SET (:email, :pseudo, :password, :salt, :token, NOW(), NOW())";
 
+
+		global $dbh;
+		
+		$newAvatar = $pseudo .'.jpg';
 		$sql = "UPDATE 	users
 				SET 	pseudo			= :pseudo,
 						location		= :location,
@@ -25,7 +24,7 @@
 		$stmt->bindValue(":pseudo", $pseudo);
 		$stmt->bindValue(":location", $location);
 		$stmt->bindValue(":metier", $metier);
-		$stmt->bindValue(":avatar", $avatar);
+		$stmt->bindValue(":avatar", $newAvatar);
 		$stmt->bindValue(":webSite", $webSite);
 		$stmt->bindValue(":github", $github);
 		$stmt->bindValue(":details", $details);
@@ -42,7 +41,7 @@
 	function insertNewUser($email, $pseudo, $hashedPassword, $salt, $token){
 
 
-		$avatar = "avatar/avatar_200.png";
+		$avatar = "avatar_200.png";
 		global $dbh;
 		//sql d'insertion de l'user
 		$sql = "INSERT INTO users (email, pseudo, avatar, pwd, salt, token, dateCreated, dateModified) 
