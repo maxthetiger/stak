@@ -2,7 +2,20 @@
     font:13px/19px "Helvetica Neue", Helvetica, Arial, sans-serif;
     transform-style: preserve-3d;
 }
+.buddycloud .stream .topic .title{
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
 
+.buddycloud .stream .topic .titleHome{
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: left;
+    color: #16a8d7;
+}
 
 .buddycloud .stream {
     margin: 8px auto 21px;
@@ -21,9 +34,18 @@
     transform-style: preserve-3d;
 }
 
+.buddycloud .hideSubmit{
+    display: none;
+}
+
 .buddycloud section {
     border-left: 1px solid rgba(0,0,0,0.13);
     border-right: 1px solid rgba(0,0,0,0.13);
+}
+
+.buddycloud section .answer {
+    border-left: none;
+    border-right: none;
 }
 
 .buddycloud article:first-child > section:first-child {
@@ -163,16 +185,19 @@
 }
 
 .buddycloud .answer{
-    position:relative;overflow:hidden;
+    position:relative;
+    overflow:hidden;
 }
 
-.buddycloud .answer textarea{
+.buddycloud .answer input{
     margin-top:13px;
+    margin-bottom: 3px;
     padding:4px 5px 2px;
     height:28px;
-    width:100%;
+    width:60%;
     font:12px/18px sans-serif;
     color:#808080;
+    float: right;
     border:1px solid rgba(0,0,0,0.21);
     box-shadow:1px 1px #fff,inset 1px 1px rgba(0,0,0,0.05);
     -moz-box-shadow:1px 1px #fff,inset 1px 1px rgba(0,0,0,0.05);
@@ -202,7 +227,7 @@
     display:block;
 }
 
-.buddycloud .answer.write textarea{
+.buddycloud .answer.write input{
     margin-bottom:34px;
     height:40px;
     color:#000;
@@ -286,6 +311,15 @@
 }
 
 .buddycloud .comment{
+    width: calc(87% + 6px);
+    min-height:40px;
+    position:relative;
+}
+
+.buddycloud .best{
+    background-color: #16a8d7;
+    color: #fff;
+    width: calc(87% + 6px);
     min-height:40px;
     position:relative;
 }
@@ -307,7 +341,7 @@
     top:13px;left:-2px;
 }
 
-.buddycloud .answer:first-child textarea{
+.buddycloud .answer:first-child input{
     margin-top:8px;
     width:399px;
 }
