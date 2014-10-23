@@ -204,4 +204,38 @@
 
 
 
+
+				/**************************************
+				************* QUESTION NEW ************
+				**************************************/
+
+	//retourne un booléen, en fonction de si le nom d'utilisateur
+	//est présent en bdd
+	function titleExists($qTitle){
+
+		global $dbh;
+
+		$sql = "SELECT COUNT(*) FROM article 
+				WHERE title = :title";
+		$stmt = $dbh->prepare($sql);
+		$stmt->bindValue(":title", $qTitle);
+		$stmt->execute();
+
+		$titleFound = $stmt->fetchColumn(); //pseudoFound vaut 1 ou 0
+		return $titleFound;
+	}
+
+
+
+		
+	function multiExplodeTags ($delimiters,$string) {
+	    
+	    $ready = str_replace($delimiters, $delimiters[0], $string);
+	    $launch = explode($delimiters[0], $ready);
+	    return  $launch;
+	}
+
+
+
+
 ?>

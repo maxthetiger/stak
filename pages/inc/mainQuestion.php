@@ -1,3 +1,8 @@
+<?php 
+	include ("pages/php/validation_newArticle.php");
+?>
+
+
 <section id="formulaire_container">
 	<div id="question">
 		<form method="POST">
@@ -10,7 +15,7 @@
 			<textarea id="qArea" name="qContent" placeholder="Votre titre"></textarea>
 			<input type="text" name="qTags" placeholder="Vos tags">
 			<input type="submit" value="valider">
-		</form>
+
 			<?php 
 				if (!empty($errors_q)){
 					echo '<ul class="errors">';
@@ -20,6 +25,8 @@
 					echo '</ul>';
 				}
 			?>
+		</form>
+			
 	</div>
 
 </section>

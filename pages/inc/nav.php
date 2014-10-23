@@ -1,14 +1,6 @@
 
 <?php 
-if (!empty($page) &&  ($page == "question" )):
-	echo '
-	<nav id="nav">
-		<a href="#" class="active">NewStakode</a>
-		<a href="#">Tuts +</a>
-		<a href="#">Carrière</a>
-		<a href="#">Actu / Evènements</a>
-	</nav>';
-	else: 
+if (!empty($page) &&  ($page != "question" )):
 		echo '
 	<nav id="nav">
 		<a href="#" class="active">NewStakode</a>
@@ -18,10 +10,3 @@ if (!empty($page) &&  ($page == "question" )):
 	</nav>';
 
 endif; ?>
-<!-- 
-<nav id="nav">
-	<a href="#" class="active">NewStakode</a>
-	<a href="#">Tuts +</a>
-	<a href="#">Carrière</a>
-	<a href="#">Actu / Evènements</a>
-</nav> -->
