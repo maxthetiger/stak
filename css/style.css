@@ -721,4 +721,45 @@ footer #copy
 
 
 
+/***************************************************
+********************* HOME ***********************
+***************************************************/
 
+
+#homeAsk{
+	width: 100%;
+	max-width: 980px;
+	margin: auto;
+}
+
+#homeAsk #askQuestion{
+	text-align: center;
+	font-size: 30px;
+	font-family: Verdana;
+	font-weight: 700;
+	padding: 20px 0;
+	background-color: #16A8D7;
+	display: block;
+	margin: auto;
+	width: 100%;
+	text-decoration: none;
+	color: #fff;
+	text-transform: uppercase;
+}
+
+#homeAsk #askQuestion:hover{	
+	text-decoration: underline;
+}
+
+#homeAsk #askQuestion:visited{	
+	text-decoration: none;
+	color: #fff;
+}
+
+
+.tagsArticle{
+	background-color: #16A8D7;
+	color: #fff;
+	padding: 3px 5px;
+	margin-right: 5px;
+}
