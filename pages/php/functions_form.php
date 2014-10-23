@@ -238,4 +238,52 @@
 
 
 
+				/**************************************
+				************* ALL ARTICLES ************
+				**************************************/
+
+	function catchAllArticles(){
+
+		global $dbh;
+
+		$sql = "SELECT 
+					article.id AS articleID,
+					article.title,
+					article.content,
+					article.view,
+					article.dateCreated,
+					article.dateModified,
+					article.id_users,
+					users.id AS usersID,
+					users.pseudo,
+					users.location,
+					users.avatar,
+					users.score,
+					users.status
+				FROM article
+				JOIN users 	ON article.id_users = users.id
+				ORDER BY article.dateCreated";
+		$stmt = $dbh->prepare($sql);
+		$stmt->execute();
+
+		$allArticles = $stmt->fetchAll();
+		return $allArticles;
+	}
+
+
+	
+	function getThisTags($idThis){
+
+		global $dbh;
+
+		$sql = "SELECT name 
+				FROM tags
+				WHERE id_article = $idThis";
+		$stmt = $dbh->prepare($sql);
+		$stmt->execute();
+
+		$allTagsArticles = $stmt->fetchAll();
+		return $allTagsArticles;
+	}
+
 ?>

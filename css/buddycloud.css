@@ -1,24 +1,23 @@
 .buddycloud {
-    padding: 21px;
     font:13px/19px "Helvetica Neue", Helvetica, Arial, sans-serif;
     transform-style: preserve-3d;
 }
 
-.buddycloud h1 {
-    text-align: center;
-}
 
 .buddycloud .stream {
-    margin: 8px 0 21px;
-    width: 502px;
+    margin: 8px auto 21px;
+    width: 60%;
+    max-width: 980px;
     border-radius: 5px;
     position: relative;
     transform-style: preserve-3d;
 }
 
 .buddycloud article {
+    margin-top: 15px;
     position: relative;
     border-bottom: 1px solid rgba(0,0,0,0.13);
+    border-top: 1px solid rgba(0,0,0,0.13);
     transform-style: preserve-3d;
 }
 
@@ -33,7 +32,8 @@
 }
 
 .buddycloud article:last-child {
-    border-bottom: none; 
+    border-bottom: 1px solid rgba(0,0,0,0.13);
+   /* border-bottom: none; */
 }
 
 .buddycloud article:last-child > section:last-child {
