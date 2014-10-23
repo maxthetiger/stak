@@ -11,8 +11,6 @@
 		} elseif (!empty($_GET['onglet'] == 'view')){
 			include ("inc/profil/view.php");
 		}
-		else { include ("inc/profil/view.php");
-		}
 	}
 	else {
 		include ("inc/profil/view.php");

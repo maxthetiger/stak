@@ -2,6 +2,9 @@
 	<div id="infos_profil" class="container">
 		<div id="fiche">
 			<div class="left" id="profil_img">
+				<span id="avatar">
+					<img src="http://www.catsthatlooklikehitler.com/kitler/pics/kitler1927.jpg">
+				</span>
 				<div id="pseudo_profil">Maxthetiger 
 					<div id="status">
 						<span class="in">In</span> | 
@@ -11,9 +14,6 @@
 				<div id="score">5,376</div>
 				<div class="infos_small" id="locate">Paris, France</div>
 				<div class="infos_small" id="work">Mangeur de Gaufres</div>
-				<span id="avatar">
-					<img src="http://www.catsthatlooklikehitler.com/kitler/pics/kitler1927.jpg">
-				</span>
 				<div class="urls">
 					<span class="link">Github :</span>
 					<span class="link_url">http://blablacar.com</span>

@@ -3,7 +3,7 @@
 	//formulaire soumis ?
 	if (!empty($_POST)){
 		//déclaration des variables du formulaire
-		$user = $_SESSION['user'];
+		$user 			= $_SESSION['user'];
 		$q_idUser 		= $user['id'];
 		$qTitle 		= "";
 		$qContent		= "";
