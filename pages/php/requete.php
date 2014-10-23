@@ -1,6 +1,39 @@
 <?php	
 
 
+
+	function completeUserProfil($e_idUser, $pseudo, $location, $metier, $avatar, $webSite, $github, $details, $email) {
+
+		global $dbh;
+		$sql = "UPDATE users
+				SET (:email, :pseudo, :password, :salt, :token, NOW(), NOW())";
+
+		$sql = "UPDATE 	users
+				SET 	pseudo			= :pseudo,
+						location		= :location,
+						metier			= :metier,
+						avatar			= :avatar,
+						webSite			= :webSite,
+						github			= :github,
+						details			= :details,
+						email			= :email,
+						dateModified	= NOW()
+				WHERE 	id = $e_idUser";
+
+
+		$stmt = $dbh->prepare($sql);
+		$stmt->bindValue(":pseudo", $pseudo);
+		$stmt->bindValue(":location", $location);
+		$stmt->bindValue(":metier", $metier);
+		$stmt->bindValue(":avatar", $avatar);
+		$stmt->bindValue(":webSite", $webSite);
+		$stmt->bindValue(":github", $github);
+		$stmt->bindValue(":details", $details);
+		$stmt->bindValue(":email", $email);
+
+		$stmt->execute();
+
+	}
 				/**************************************
 				*************** REGISTER **************
 				**************************************/
@@ -8,14 +41,17 @@
 
 	function insertNewUser($email, $pseudo, $hashedPassword, $salt, $token){
 
+
+		$avatar = "avatar/avatar_200.png";
 		global $dbh;
 		//sql d'insertion de l'user
-		$sql = "INSERT INTO users (email, pseudo, pwd, salt, token, dateCreated, dateModified) 
-				VALUES (:email, :pseudo, :password, :salt, :token, NOW(), NOW())";
+		$sql = "INSERT INTO users (email, pseudo, avatar, pwd, salt, token, dateCreated, dateModified) 
+				VALUES (:email, :pseudo, :avatar, :password, :salt, :token, NOW(), NOW())";
 
 		$stmt = $dbh->prepare($sql);
 		$stmt->bindValue(":email", $email);
 		$stmt->bindValue(":pseudo", $pseudo);
+		$stmt->bindValue(":avatar", $avatar);
 		$stmt->bindValue(":password", $hashedPassword);
 		$stmt->bindValue(":salt", $salt);
 		$stmt->bindValue(":token", $token);

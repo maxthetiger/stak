@@ -2,42 +2,44 @@
 	<div id="infos_profil" class="container">
 		<div id="fiche">
 			<div class="left" id="profil_img">
-				<div id="pseudo_profil">Maxthetiger 
+				<span id="avatar">
+					<img src="<?php echo $value['avatar']; ?>">
+				</span>
+				<div id="pseudo_profil"><?php echo $value['pseudo']; ?>
 					<div id="status">
 						<span class="in">In</span> | 
 						<span class="out">Out</span>
 					</div>
 				</div>
 				<div id="score">5,376</div>
-				<div class="infos_small" id="locate">Paris, France</div>
-				<div class="infos_small" id="work">Mangeur de Gaufres</div>
-				<span id="avatar">
-					<img src="http://www.catsthatlooklikehitler.com/kitler/pics/kitler1927.jpg">
-				</span>
+				<div class="infos_small" id="locate">
+					<?php echo $value['location']; ?>
+				</div>
+				<div class="infos_small" id="work">
+					<?php echo $value['metier']; ?>
+				</div>
 				<div class="urls">
 					<span class="link">Github :</span>
-					<span class="link_url">http://blablacar.com</span>
+					<span class="link_url">
+						<?php echo $value['github']; ?>
+					</span>
 				</div>	
 				<div class="urls">
 					<span class="link">Website :</span>
-					<span class="link_url">http://www.maxthetiger.com</span>
+					<span class="link_url">
+						<?php echo $value['webSite']; ?>
+					</span>
 				</div>
 			</div>
 
 			<div class="right" id="profil_info">
 				<header>Description</header>
-				<div>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</div>
+				<div><?php echo $value['details']; ?></div>
 			</div>
 		</div>
 		<div id="reponses" class="left">
-			<header class="header_section"><span class="nombre">115</span>Réponses</header>
+			<header class="header_section">
+				<span class="nombre">115</span>Réponses</header>
 			<main class="main">
 				<ul>
 					<li><a href="">Réponse à la question 1</a></li>

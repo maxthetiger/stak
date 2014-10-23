@@ -17,9 +17,9 @@
 			<input type="submit" value="valider">
 
 			<?php 
-				if (!empty($errors_q)){
+				if (!empty($errors_r)){
 					echo '<ul class="errors">';
-					foreach($errors_q as $error){
+					foreach($errors_r as $error){
 						echo '<li>'.$error.'</li>';
 					}
 					echo '</ul>';
