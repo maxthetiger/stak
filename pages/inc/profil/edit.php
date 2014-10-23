@@ -8,7 +8,7 @@
 				<span id="avatar">
 					<label>
 						<!-- <img id="img" src="#"> -->
-	 					<img id="img" alt="<?php echo $pseudo; ?>" src="#" height="200" width="200" >
+	 					<img id="img" alt="<?php echo $pseudo; ?>" src="">
 							<input type="file" id="avatar" value="avatar" name="avatar" value="avatar" onchange="readURL(this);">
 					</label>
 				</span>

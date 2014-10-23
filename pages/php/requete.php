@@ -41,6 +41,8 @@
 
 	function insertNewUser($email, $pseudo, $hashedPassword, $salt, $token){
 
+
+		$avatar = "avatar/avatar_200.png";
 		global $dbh;
 		//sql d'insertion de l'user
 		$sql = "INSERT INTO users (email, pseudo, avatar, pwd, salt, token, dateCreated, dateModified) 
@@ -49,7 +51,7 @@
 		$stmt = $dbh->prepare($sql);
 		$stmt->bindValue(":email", $email);
 		$stmt->bindValue(":pseudo", $pseudo);
-		$stmt->bindValue(":avatar", "avatar/avatar_200.png");
+		$stmt->bindValue(":avatar", $avatar);
 		$stmt->bindValue(":password", $hashedPassword);
 		$stmt->bindValue(":salt", $salt);
 		$stmt->bindValue(":token", $token);
@@ -71,7 +73,7 @@
 		$stmt = $dbh->prepare($sql);
 		$stmt->bindValue(":pseudo", $pseudo);
 		$stmt->execute();
-		$user = $stmt->fetchAll();
+		$user = $stmt->fetch();
 		
 
 		sessionStart($user);

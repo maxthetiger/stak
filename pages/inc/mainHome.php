@@ -35,12 +35,19 @@
 		<article class="topic">
 			<section class="opener">
 				<div class="avatar">
-					<img src="http://img4.wikia.nocookie.net/__cb20140425020652/prowrestling/images/e/e9/Tigre_Uno_img_2404.jpg">
+					<img src="<?php echo $value['avatar']; ?>">
 				</div>
 				<div class="postmeta">
-					<span class="time">3 days</span>
+					<span class="time">
+						<?php echo $value['dateCreated']; ?>
+					</span>
 	            </div>
-	            <span class="name"><?php echo $value['pseudo']; ?></span><span class="location">from <?php echo $value['location']; ?></span>
+	            <span class="name">
+	            	<?php echo $value['pseudo']; ?>
+	            </span>
+	            <span class="location">
+	            	from <?php echo $value['location']; ?>
+	            </span>
 	            <p><?php echo $value['title']; ?></p>
 	            <p><?php 
 	            foreach ($tags as $Tkey => $Tvalue):
