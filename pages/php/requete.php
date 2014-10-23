@@ -37,7 +37,7 @@
 		$stmt = $dbh->prepare($sql);
 		$stmt->bindValue(":pseudo", $pseudo);
 		$stmt->execute();
-		$user = $stmt->fetchAll();
+		$user = $stmt->fetch();
 		
 
 		sessionStart($user);
