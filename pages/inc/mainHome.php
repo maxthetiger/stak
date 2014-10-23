@@ -31,7 +31,7 @@
 	$idThis = $value['articleID'];
 	$tags = getThisTags($idThis);
 ?>
-
+	<a href="?page=details&amp;article=<?php echo $idThis; ?>">
 		<article class="topic">
 			<section class="opener">
 				<div class="avatar">
@@ -43,19 +43,19 @@
 					</span>
 	            </div>
 	            <span class="name">
-	            	<?php echo $value['pseudo']; ?>
+	            	<?php echo ucfirst($value['pseudo']); ?>
 	            </span>
 	            <span class="location">
 	            	from <?php echo $value['location']; ?>
 	            </span>
-	            <p><?php echo $value['title']; ?></p>
+	            <h1 class="titleHome"><?php echo $value['title']; ?></h1>
 	            <p><?php 
 	            foreach ($tags as $Tkey => $Tvalue):
-	            echo '<a class="tagsArticle">' . $Tvalue['name'] . '</a>'; 	
+	            echo '<span class="tagsArticle">' . $Tvalue['name'] . '</span>'; 	
 	            endforeach;?></p>
 	        </section>
 	    </article>
-
+	</a>
 <?php
 endforeach;
 ?>

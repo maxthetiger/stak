@@ -12,7 +12,9 @@
 	background: #16a8d7; /* Old browsers */
 	font-family: arial;
 }
-
+a{
+	text-decoration: none;
+}
 
 input[type="submit"]{
 	cursor: pointer;
@@ -758,8 +760,15 @@ footer #copy
 
 
 .tagsArticle{
+	display: inline-block;
 	background-color: #16A8D7;
 	color: #fff;
 	padding: 3px 5px;
 	margin-right: 5px;
+	margin-bottom: 5px;
+	margin-top:15px;
+}
+
+.tagsArticle + hr{
+	margin-bottom: 10px;
 }

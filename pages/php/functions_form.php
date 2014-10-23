@@ -288,4 +288,33 @@
 		return $allTagsArticles;
 	}
 
+
+
+	function catchThisArticles($idThis){
+		global $dbh;
+
+		$sql = "SELECT 	article.id AS articleID,
+						article.title,
+						article.content,
+						article.view,
+						article.dateCreated,
+						article.dateModified,
+						article.id_users,
+						users.id AS usersID,
+						users.pseudo,
+						users.location,
+						users.avatar,
+						users.score,
+						users.status
+				FROM article
+				JOIN users	ON article.id_users = users.id
+				WHERE article.id = $idThis";
+		$stmt = $dbh->prepare($sql);
+		$stmt->execute();
+
+		$ThisArticle = $stmt->fetch();
+
+		return $ThisArticle;
+	}
+
 ?>

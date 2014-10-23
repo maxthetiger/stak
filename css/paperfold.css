@@ -29,6 +29,7 @@
 .showHelpers .hidden .fold .inner {
     outline: 1px solid rgba(0, 255, 0, .13);
     background: rgba(0, 255, 0, .13);
+    width: 100%
 }
 .showHelpers .hidden .fold .top,
 .showHelpers .hidden .fold .bottom {
@@ -61,7 +62,7 @@
 */
 .hidden .fold .top,
 .hidden .fold .bottom {
-    width: 502px;
+    width: 100%;
     transform-origin: top;
     transform: rotateX(-90deg);
     background-image: linear-gradient(top, rgba(255,255,255,0.5), rgba(255,255,255,0.55) 3%, rgba(255,255,255,0.5) 66%, rgba(255,255,255,0));
@@ -100,7 +101,7 @@
 .seeMore {
     padding: 0;
     height: 23px;
-    width: 500px;
+    width: calc(100% -2px);
     color: gray;
     text-align: center;
     background: repeating-linear-gradient(
