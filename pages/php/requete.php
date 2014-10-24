@@ -208,10 +208,62 @@
 
 
 
+	function insertNewArticleComment($userID, $type, $articleID, $articleComment){
 
+		global $dbh;
 
+	//sql d'insertion des commentaires d'articles
+		$sql = "INSERT INTO comment (comment, id_article, id_users, typeComRep, dateCreated, dateModified) 
+				VALUES (:comment, :id_article, :id_users, :typeComRep, NOW(), NOW())";
 
+		$stmt = $dbh->prepare($sql);
+		$stmt->bindValue(":id_article", $articleID);
+		$stmt->bindValue(":id_users", $userID);
+		$stmt->bindValue(":typeComRep", $type);
+		$stmt->bindValue(":comment", $articleComment);
 
+		$stmt->execute();
 		
+		afficheArticleComment($type, $articleComment, $articleID);
 	
+	}
 
+
+	function insertNewArticleReponse($userID, $idThis, $reponse){
+		global $dbh;
+
+	//sql d'insertion des commentaires d'articles
+		$sql = "INSERT INTO reponse (reponse, id_article, id_users, dateCreated, dateModified) 
+				VALUES (:reponse, :id_article, :id_users, NOW(), NOW())";
+
+		$stmt = $dbh->prepare($sql);
+		$stmt->bindValue(":id_article", $idThis);
+		$stmt->bindValue(":id_users", $userID);
+		$stmt->bindValue(":reponse", $reponse);
+
+		$stmt->execute();
+		
+		afficheArticleReponse($idThis);
+	}
+
+
+
+	function insertNewReponseComment($userID, $type, $reponseID, $comment){
+
+		global $dbh;
+
+	//sql d'insertion des commentaires d'articles
+		$sql = "INSERT INTO comment (comment, id_reponse, id_users, typeComRep, dateCreated, dateModified) 
+				VALUES (:comment, :id_reponse, :id_users, :typeComRep, NOW(), NOW())";
+
+		$stmt = $dbh->prepare($sql);
+		$stmt->bindValue(":id_reponse", $reponseID);
+		$stmt->bindValue(":id_users", $userID);
+		$stmt->bindValue(":typeComRep", $type);
+		$stmt->bindValue(":comment", $comment);
+
+		$stmt->execute();
+		
+		//afficheReponseComment($type, $comment, $reponseID);
+	
+	}

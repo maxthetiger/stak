@@ -147,29 +147,6 @@
 	} 
 
 
-/*	function passwordValidate($password_bis, $password){
-
-		global $dbh;
-
-		//password
-		if (empty($password)){
-			$errors[] = "Veuillez entrer un password !";
-		}
-		elseif (empty($password_bis)){
-			$errors[] = "Veuillez confirmer votre password !";
-		}
-		elseif ($password_bis != $password){
-			$errors[] = "Vos passwords ne sont pas identiques !";
-		}
-		elseif (strlen($password) < 7){
-			$errors[] = "Votre password doit comporter au minmum 7 caractères !";
-		}
-		return $errors;
-
-	}*/
-
-
-
 	function resetPassword($email){
 
 		global $dbh;
@@ -344,5 +321,90 @@
 
 		return $ThisArticle;
 	}
+
+
+		function afficheArticleComment($idThis){
+		global $dbh;
+
+		$sql = "SELECT 	comment.id AS commentID,
+						comment.id_article,
+						comment.comment,
+						comment.typeComRep,
+						comment.id_users,
+						comment.dateCreated,
+						users.id AS usersID,
+						users.pseudo
+				FROM comment
+				JOIN users	ON comment.id_users = users.id
+				WHERE 	comment.typeComRep = 0
+				AND 	comment.id_article = $idThis
+				ORDER BY comment.dateCreated DESC";
+		$stmt = $dbh->prepare($sql);
+		$stmt->execute();
+
+		$ThisCom = $stmt->fetchAll();
+
+		return $ThisCom;
+	}
+
+
+	function afficheArticleReponse($idThis){
+
+	global $dbh;
+
+		$sql = "SELECT 	reponse.id AS reponseID,
+						reponse.id_article,
+						reponse.reponse,
+						reponse.best,
+						reponse.note,
+						reponse.id_users,
+						reponse.dateCreated,
+						users.id AS usersID,
+						users.pseudo,
+						users.location,
+						users.avatar,
+						users.score,
+						users.status
+				FROM reponse
+				JOIN users	ON reponse.id_users = users.id
+				WHERE 	reponse.id_article = $idThis
+				ORDER BY reponse.dateCreated DESC";
+		$stmt = $dbh->prepare($sql);
+		$stmt->execute();
+
+		$ThisRem = $stmt->fetchAll();
+
+		return $ThisRem;
+	}
+
+
+	function afficheReponseComment($type, $comment, $reponseID){
+		global $dbh;
+
+		
+		$sql = "SELECT 	comment.id AS commentID,
+						comment.id_reponse,
+						comment.comment,
+						comment.typeComRep,
+						comment.id_users,
+						comment.dateCreated,
+						users.id AS usersID,
+						users.pseudo
+				FROM comment
+				JOIN users	ON comment.id_users = users.id
+				WHERE 	comment.typeComRep = 1
+				AND 	comment.id_reponse = $reponseID
+				ORDER BY comment.dateCreated DESC";
+		$stmt = $dbh->prepare($sql);
+		$stmt->execute();
+
+		$ThisComRep = $stmt->fetchAll();
+
+		return $ThisComRep;
+
+
+	}
+
+
 
 ?>
