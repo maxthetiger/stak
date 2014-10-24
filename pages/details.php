@@ -18,7 +18,7 @@
 			<article class="topic">
 				<section class="opener">
 					<div class="avatar">
-						<img src="<?php echo $ThisArticle['avatar']; ?>">
+						<img src="avatar/<?php echo $ThisArticle['avatar']; ?>">
 					</div>
 					<div class="postmeta">
 						<span class="time">
@@ -91,7 +91,7 @@
 
 	            		<section class="comment">
 			            	<div class="avatar">
-			            		<img src="<?php echo $repArt['avatar']; ?>"></div>
+			            		<img src="avatar/<?php echo $repArt['avatar']; ?>"></div>
 							<div class="postmeta">
 								<span class="time"><?php echo $repArt['dateCreated']; ?></span>
 			            	</div>
@@ -124,7 +124,7 @@
 								<?php 
 								$reponseID = $repArt['reponseID'];
 								$thisReponse = afficheReponseComment($type, $comment, $reponseID);	
-
+								/*print_r($thisReponse);*/
 									if (!empty($thisReponse)){
 										echo '<ul class="commentaires">';
 										foreach($thisReponse as $comRep){

@@ -311,7 +311,7 @@
 }
 
 .buddycloud .comment{
-    width: calc(87% + 6px);
+    width: calc(89% + 6px);
     min-height:40px;
     position:relative;
 }
@@ -369,4 +369,42 @@
 
 .avatar ul{
     display: block;
+}
+
+
+
+.buddycloud .opener .answer .commentaires {
+    float: right;
+    width: 55%;
+}
+
+.buddycloud .opener .answer .commentaires .pseudoCom {
+   font-weight: 700;
+   color: #AAA;
+   list-style: none;
+}
+
+.buddycloud .opener .answer .commentaires .comCom {
+   font-weight: 400;
+   list-style: none;
+   margin-left: 30px;
+   padding-bottom: 10px;
+}
+
+
+.buddycloud .comment .answer .commentaires {
+    float: right;
+    width: 55%;
+}
+
+.buddycloud .comment .answer .commentaires .pseudoCom {
+   font-weight: 700;
+   color: #AAA;
+   list-style: none;
+}
+.buddycloud .comment .answer .commentaires .comCom {
+   font-weight: 400;
+   list-style: none;
+   margin-left: 30px;
+   padding-bottom: 10px;
 }

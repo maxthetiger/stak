@@ -336,6 +336,7 @@ header
 
 #main_container .container .left:nth-child(2n){
 	float: right;
+	margin-left: 5%;
 }
 
 #main_container .container #fiche .right{
