@@ -269,7 +269,7 @@
 					users.status
 				FROM article
 				JOIN users 	ON article.id_users = users.id
-				ORDER BY article.dateCreated";
+				ORDER BY article.dateCreated DESC";
 		$stmt = $dbh->prepare($sql);
 		$stmt->execute();
 
@@ -404,6 +404,73 @@
 
 
 	}
+
+
+
+	function selectMyQuestions(){
+		global $dbh;
+		$idUser = $_SESSION['user']['id'];
+
+		$sql = "SELECT 	article.id AS articleID,
+						article.title,
+						article.dateCreated,
+						article.id_users,
+						users.id AS usersID
+				FROM article
+				JOIN users	ON article.id_users = users.id
+				WHERE users.id = $idUser
+				ORDER BY article.dateCreated DESC
+				LIMIT 5";
+		$stmt = $dbh->prepare($sql);
+		$stmt->execute();
+
+		$myQuestion = $stmt->fetchAll();
+
+		return $myQuestion;
+	}
+
+
+	function selectMyReponses(){
+		global $dbh;
+
+		$idUser = $_SESSION['user']['id'];
+
+		$sql = "SELECT 	reponse.id AS reponseID,
+						reponse.reponse,
+						reponse.dateCreated,
+						reponse.id_article,
+						reponse.id_users,
+						users.id AS usersID
+				FROM reponse
+				JOIN users	ON reponse.id_users = users.id
+				WHERE users.id = $idUser
+				ORDER BY reponse.dateCreated DESC
+				LIMIT 5";
+		$stmt = $dbh->prepare($sql);
+		$stmt->execute();
+
+		$myReponses = $stmt->fetchAll();
+
+		return $myReponses;
+	}
+
+
+
+	//$str est la chaîne de caractères et $nb le nombre de caractères maximum à afficher.
+	function tronque($str, $nb = 50) 
+	{
+    // Si le nombre de caractères présents dans la chaine est supérieur au nombre 
+    // maximum, alors on découpe la chaine au nombre de caractères 
+    if (strlen($str) > $nb) 
+    {
+        $str = substr($str, 0, $nb);
+        $position_espace = strrpos($str, " "); //on récupère l'emplacement du dernier espace dans la chaine, pour ne pas découper un mot.
+        $texte = substr($str, 0, $position_espace);  //on redécoupe à la fin du dernier mot
+        $str = $str."..."; //puis on rajoute des ...
+    }
+    return $str; //on retourne la variable modifiée
+	}
+
 
 
 

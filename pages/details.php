@@ -4,8 +4,9 @@
 	include ("pages/php/validation_comment.php");
 	include ("pages/php/validation_commentRep.php");
 	include ("pages/php/validation_reponse.php");
+print_r($_SESSION);
+//die();
 ?>
-
 
 <section id="mainDetails">
 	<div class="box buddycloud">
@@ -18,7 +19,7 @@
 			<article class="topic">
 				<section class="opener">
 					<div class="avatar">
-						<img src="<?php echo $ThisArticle['avatar']; ?>">
+						<img src="avatar/<?php echo $ThisArticle['avatar']; ?>">
 					</div>
 					<div class="postmeta">
 						<span class="time">
@@ -91,7 +92,7 @@
 
 	            		<section class="comment">
 			            	<div class="avatar">
-			            		<img src="<?php echo $repArt['avatar']; ?>"></div>
+			            		<img src="avatar/<?php echo $repArt['avatar']; ?>"></div>
 							<div class="postmeta">
 								<span class="time"><?php echo $repArt['dateCreated']; ?></span>
 			            	</div>

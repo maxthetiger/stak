@@ -155,6 +155,8 @@
 
 		$stmt->execute();
 
+		$score = updatescore($nb=5);
+
 		$articleID = findArticleID($qTitle, $exploded);
 		insertArticleTags($articleID, $exploded);
 
@@ -223,6 +225,8 @@
 		$stmt->bindValue(":comment", $articleComment);
 
 		$stmt->execute();
+
+		$score = updatescore($nb=1);
 		
 		afficheArticleComment($type, $articleComment, $articleID);
 	
@@ -243,6 +247,8 @@
 
 		$stmt->execute();
 		
+		$score = updatescore($nb=10);
+
 		afficheArticleReponse($idThis);
 	}
 
@@ -263,7 +269,30 @@
 		$stmt->bindValue(":comment", $comment);
 
 		$stmt->execute();
+
+		$score = updatescore($nb=1);
 		
 		//afficheReponseComment($type, $comment, $reponseID);
 	
+	}
+
+
+	function updatescore($nb){
+		$id = $_SESSION['user']['id'];
+		$score = $_SESSION['user']['score'] + $nb;
+
+		global $dbh;
+
+		$sql = "UPDATE users 
+				SET score = :score,
+					dateModified = NOW()
+				WHERE id = :id";
+
+		$stmt = $dbh->prepare($sql);
+		$stmt->bindValue(":score", $score);
+		$stmt->bindValue(":id", $id);
+
+		$stmt->execute();
+		sessionStart($user);
+
 	}
