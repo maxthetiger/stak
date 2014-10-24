@@ -2,7 +2,35 @@
 
 
 
+	function profilComplete($e_idUser, $pseudo, $location, $metier, $avatar, $webSite, $github, $details, $email) {
 
+		global $dbh;
+
+		$sql = "SELECT * FROM users
+				WHERE 	id 			= $e_idUser
+						pseudo 		= :pseudo,
+						location	= :location,
+						metier		= :metier,
+						avatar		= :avatar,
+						webSite		= :webSite,
+						github		= :github,
+						details		= :details,
+						email		= :email";
+
+		$stmt = $dbh->prepare($sql);
+		$stmt->bindValue(":pseudo", $pseudo);
+		$stmt->bindValue(":location", $location);
+		$stmt->bindValue(":metier", $metier);
+		$stmt->bindValue(":avatar", $avatar);
+		$stmt->bindValue(":webSite", $webSite);
+		$stmt->bindValue(":github", $github);
+		$stmt->bindValue(":details", $details);
+		$stmt->bindValue(":email", $email);
+		$stmt->execute();
+
+		$profilAccess = $stmt->fetchAll();
+		return $profilAccess;
+	}
 
 				/**************************************
 				*************** REGISTER **************

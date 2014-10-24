@@ -5,7 +5,7 @@
 		<div id="fiche">
 			<div class="left" id="profil_img">
 				<span id="avatar">
-					<img src="avatar/<?php echo $user['avatar']; ?>">
+					<img src="avatar/<?php echo $user['pseudo'] . ".jpg"; ?>">
 				</span>
 				<div id="pseudo_profil"><?php echo $user['pseudo']; ?>
 					<div id="status">

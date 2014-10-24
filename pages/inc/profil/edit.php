@@ -40,7 +40,7 @@
 				<span id="avatar">
 					<label>
 						<!-- <img id="img" src="#"> -->
-	 					<img id="img" alt="<?php echo $user['avatar']; ?>" src="avatar/<?php echo $user['avatar']; ?>">
+	 					<img id="img" src="avatar/<?php echo $user['pseudo'] . ".jpg"; ?>">
 							<input type="file" id="avatar" name="avatar" value="avatar" onchange="readURL(this);">
 					</label>
 				</span>
@@ -55,7 +55,6 @@
 				</div>
 
 				<div id="score">5,376</div>
-				
 				<div class="infos_small" id="locate">
 					<input type="text" id="location" name="location" value="<?php echo $user['location']; ?>" placeholder="Ou êtes-vous?">
 				</div>

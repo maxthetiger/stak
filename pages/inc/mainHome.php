@@ -35,7 +35,7 @@
 		<article class="topic">
 			<section class="opener">
 				<div class="avatar">
-					<img src="<?php echo $value['avatar']; ?>">
+					<img src="avatar/<?php echo $value['avatar']; ?>">
 				</div>
 				<div class="postmeta">
 					<span class="time">

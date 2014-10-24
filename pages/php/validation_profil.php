@@ -36,7 +36,6 @@
 		$metier			= strip_tags($_POST['metier']);
 		$avatar_temp	= $_FILES['avatar'];
 		$avatar 		= $avatar_temp['name'];
-
 		$webSite		= strip_tags($_POST['webSite']);
 		$github			= strip_tags($_POST['github']);
 		$details		= strip_tags($_POST['details']);
