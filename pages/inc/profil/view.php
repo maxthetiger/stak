@@ -1,4 +1,7 @@
-<?php $user = $_SESSION['user']; ?>
+<?php $user = $_SESSION['user']; 
+?>
+
+
 
 <div id="main_container">
 	<div id="infos_profil" class="container">
@@ -13,7 +16,7 @@
 						<span class="out">Out</span>
 					</div>
 				</div>
-				<div id="score">5,376</div>
+				<div id="score"><?php echo $user['score']; ?></div>
 				<div class="infos_small" id="locate">
 					<?php echo $user['location']; ?>
 				</div>
@@ -44,11 +47,16 @@
 				<span class="nombre">115</span>Réponses</header>
 			<main class="main">
 				<ul>
-					<li><a href="">Réponse à la question 1</a></li>
-					<li><a href="">Comment allumer la lumière</a></li>
-					<li><a href="">Je n'ai vraiment pas d'idée</a></li>
-					<li><a href="">Réunion sur le site lundi</a></li>
-					<li><a href="">Envie de dormir un peu</a></li>
+					<?php 
+					$afficheMesReponses = selectMyReponses();
+
+					foreach ($afficheMesReponses as $reponses) {
+							$str = $reponses['reponse'];
+							$repAffiche = tronque($str, $nb = 50);
+
+					echo '<li><a href="' . '?page=details&amp;article=' . $reponses['id_article'] . '">' . $repAffiche . '</a></li>';
+					}
+					?>
 				</ul>
 			</main>
 			<div class="more"><a href="">>> i++</a></div>
@@ -58,11 +66,13 @@
 			<header class="header_section"><span class="nombre">327</span>Questions</header>
 			<main class="main">
 				<ul>
-					<li><a href="">Comment appliquer du CSS</a></li>
-					<li><a href="">Faire une Requête SQL</a></li>
-					<li><a href="">Qu'est-ce que le JSON</a></li>
-					<li><a href="">Voici une question un peu plus longue ?</a></li>
-					<li><a href="">Installer MAMP</a></li>
+					<?php 
+					$afficheMesQuestions = selectMyQuestions();
+
+					foreach ($afficheMesQuestions as $question) {
+					echo '<li><a href="' . '?page=details&amp;article=' . $question['articleID'] . '">' . $question['title'] . '</a></li>';
+					}
+					?>
 				</ul>
 			</main>
 			<div class="more"><a href="">>> i++</a></div>

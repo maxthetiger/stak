@@ -1,10 +1,9 @@
 <?php
 
-		$user 			= $_SESSION['user']; print_r($_SESSION);
+		$user 			= $_SESSION['user']; 
 	//formulaire soumis ?
 	if (!empty($_POST)){
 
-		print_r($_POST);
 		//déclaration des variables du formulaire
 		$q_idUser 		= $user['id'];
 		$qTitle 		= "";

@@ -7,7 +7,7 @@
 			<div class="edit <?php if ($_GET['onglet'] == "edit") {echo "active";} ?> ">
 				<a href="?page=profil&onglet=edit">edit</a>
 			</div>
-			<div class="view <?php if ($_GET['onglet'] == "view") {echo "active";} ?>">
+			<div class="view <?php if ($_GET['onglet'] == "view" || $_GET['onglet'] == "") {echo "active";} ?>">
 				<a href="?page=profil&onglet=view">view</a>
 			</div>
 		</nav>

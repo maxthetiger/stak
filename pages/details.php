@@ -4,8 +4,9 @@
 	include ("pages/php/validation_comment.php");
 	include ("pages/php/validation_commentRep.php");
 	include ("pages/php/validation_reponse.php");
+print_r($_SESSION);
+//die();
 ?>
-
 
 <section id="mainDetails">
 	<div class="box buddycloud">
