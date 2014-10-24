@@ -6,7 +6,9 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width">
+		<favicon 
 			<title>STACKODE | <?php echo $page; ?></title>
+			<LINK REL="SHORTCUT ICON" href="favicon.ico">
 			<link rel="stylesheet" href="css/style.css">
 			<link rel="stylesheet" href="css/profil_style.css">
 			<link rel="stylesheet" href="css/jquery-ui.min.css">

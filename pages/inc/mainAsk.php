@@ -1,33 +1,14 @@
-<!-- <section id="mainHome">
-	<h1>Les derniers articles</h1>
 
- -->
-
-<section id="homeAsk">
-
-	<a id="askQuestion" href="<?php
-	if (userIsLogged()){
-		echo "?page=question";
-	} else {
-		echo "?page=register";
-	}
-
-?>"> Poser une nouvelle question</a>
-
-<!-- 
-	<article id="artThree">
-		<a href="?page=details">details</a>
-	</article>
-</section> -->
-
+<section id="myAsk">
 
 
 	<div class="box buddycloud">
 	      <div class="stream"> 
 
 <?php
-	$articles = catchAllArticles();
-	foreach ($articles as $key => $value):
+	
+	$articles = catchAllmyArticles();
+	foreach ($articles as $value):
 	$idThis = $value['articleID'];
 	$tags = getThisTags($idThis);
 ?>

@@ -59,7 +59,7 @@
 					?>
 				</ul>
 			</main>
-			<div class="more"><a href="">>> i++</a></div>
+			<div class="more"><a href="?page=mesreponses">>> i++</a></div>
 		</div>
 
 		<div id="questions" class="left">
@@ -75,10 +75,10 @@
 					?>
 				</ul>
 			</main>
-			<div class="more"><a href="">>> i++</a></div>
+			<div class="more"><a href="?page=mesquestions">>> i++</a></div>
 		</div>
 
-		<div class="left">
+		<!-- <div class="left">
 			<header class="header_section"><span class="nombre">5,376</span>Points</header>
 			<main class="main">
 				<ul>
@@ -104,6 +104,6 @@
 				</ul>
 			</main>
 			<div class="more"><a href="">>> i++</a></div>
-		</div>
+		</div> -->
 	</div>
 </div>

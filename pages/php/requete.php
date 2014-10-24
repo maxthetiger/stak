@@ -155,7 +155,8 @@
 
 		$stmt->execute();
 
-		$score = updatescore($nb=5);
+		$nb = "score+5";
+		$score = updatescore($nb);
 
 		$articleID = findArticleID($qTitle, $exploded);
 		insertArticleTags($articleID, $exploded);
@@ -226,7 +227,8 @@
 
 		$stmt->execute();
 
-		$score = updatescore($nb=1);
+		$nb = "score+1";
+		$score = updatescore($nb);
 		
 		afficheArticleComment($type, $articleComment, $articleID);
 	
@@ -247,7 +249,8 @@
 
 		$stmt->execute();
 		
-		$score = updatescore($nb=10);
+		$nb = "score+10";
+		$score = updatescore($nb);
 
 		afficheArticleReponse($idThis);
 	}
@@ -269,8 +272,8 @@
 		$stmt->bindValue(":comment", $comment);
 
 		$stmt->execute();
-
-		$score = updatescore($nb=1);
+		$nb = "score+1";
+		$score = updatescore($nb);
 		
 		//afficheReponseComment($type, $comment, $reponseID);
 	
@@ -279,20 +282,36 @@
 
 	function updatescore($nb){
 		$id = $_SESSION['user']['id'];
-		$score = $_SESSION['user']['score'] + $nb;
+		/*$score = $_SESSION['user']['score'] + $nb;
+		echo $score;*/
 
 		global $dbh;
 
 		$sql = "UPDATE users 
-				SET score = :score,
+				SET score = $nb,
 					dateModified = NOW()
 				WHERE id = :id";
 
 		$stmt = $dbh->prepare($sql);
-		$stmt->bindValue(":score", $score);
+	/*	$stmt->bindValue(":score", $score);*/
 		$stmt->bindValue(":id", $id);
 
 		$stmt->execute();
-		sessionStart($user);
+		
+	}
 
+	function updateArticleNote($nba, $articleID){
+		$id = $_SESSION['user']['id'];
+		global $dbh;
+		
+
+		$sql = "UPDATE article 
+				SET note = $nba,
+					dateModified = NOW()
+				WHERE id = :id";
+		$stmt = $dbh->prepare($sql);
+		$stmt->bindValue(":id", $articleID);
+
+		$stmt->execute();
+		
 	}

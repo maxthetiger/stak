@@ -261,6 +261,7 @@
 					article.dateCreated,
 					article.dateModified,
 					article.id_users,
+					article.note,
 					users.id AS usersID,
 					users.pseudo,
 					users.location,
@@ -305,6 +306,7 @@
 						article.dateCreated,
 						article.dateModified,
 						article.id_users,
+						article.note,
 						users.id AS usersID,
 						users.pseudo,
 						users.location,
@@ -415,6 +417,7 @@
 						article.title,
 						article.dateCreated,
 						article.id_users,
+						article.note,
 						users.id AS usersID
 				FROM article
 				JOIN users	ON article.id_users = users.id
@@ -454,8 +457,61 @@
 		return $myReponses;
 	}
 
+	function catchAllmyArticles(){
+		global $dbh;
+		$idUser = $_SESSION['user']['id'];
+		
+		$sql = "SELECT 	article.id AS articleID,
+						article.title,
+						article.dateCreated,
+						article.id_users,
+						article.note,
+						users.pseudo,
+						users.location,
+						users.avatar,
+						users.score,
+						users.status,
+						users.id AS usersID
+				FROM users
+				JOIN article ON article.id_users = $idUser
+				WHERE users.id = $idUser
+				ORDER BY article.dateCreated DESC";
+		$stmt = $dbh->prepare($sql);
+		$stmt->execute();
+
+		$myQuestion = $stmt->fetchAll();
+
+		return $myQuestion;
+	}
 
 
+
+	function catchAllmyAnswer(){
+		global $dbh;
+		$idUser = $_SESSION['user']['id'];
+		
+		$sql = "SELECT 	reponse.id AS reponseID,
+						reponse.reponse,
+						reponse.dateCreated,
+						reponse.id_users,
+						reponse.id_article,
+						users.pseudo,
+						users.location,
+						users.avatar,
+						users.score,
+						users.status,
+						users.id AS usersID
+				FROM users
+				JOIN reponse ON reponse.id_users = $idUser
+				WHERE users.id = $idUser
+				ORDER BY reponse.dateCreated DESC";
+		$stmt = $dbh->prepare($sql);
+		$stmt->execute();
+
+		$myReponses = $stmt->fetchAll();
+
+		return $myReponses;
+	}
 	//$str est la chaîne de caractères et $nb le nombre de caractères maximum à afficher.
 	function tronque($str, $nb = 50) 
 	{

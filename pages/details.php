@@ -2,10 +2,9 @@
 	include ("inc/atop_home.php");
 	include ("inc/ahead.php");
 	include ("pages/php/validation_comment.php");
+	include ("pages/php/validation_like.php");
 	include ("pages/php/validation_commentRep.php");
 	include ("pages/php/validation_reponse.php");
-print_r($_SESSION);
-//die();
 ?>
 
 <section id="mainDetails">
@@ -32,11 +31,30 @@ print_r($_SESSION);
 		            <span class="location">
 		            	from <?php echo $ThisArticle['location']; ?>
 		            </span>
+		            <span class="name retour" >
+		            	<?php echo $ThisArticle['score']; ?>
+		            </span>
 		            <h1 class="title"><?php echo $ThisArticle['title']; ?></h1>
 		            <p><?php echo $ThisArticle['content']; ?></p>
 		            <p><?php foreach ($tags as $Tkey => $Tvalue):
 		            echo '<span class="tagsArticle">' . $Tvalue['name'] . '</span>'; 	
 		            endforeach;?></p>
+		            <!-- <span><a href="">Like</a></span>
+		            <span><a href="">Hate</a></span> -->
+
+
+		            <form method="POST" >
+						<div class="formCom">
+							<label><input type="radio" name="Like" value="like">Like</label>
+							<label><input type="radio" name="Like" value="unlike">UnLike</label>
+							<input type="hidden" name="form" value="liking">
+							<input type="hidden" name="articleID" value="<?php echo $ThisArticle['articleID']; ?>">
+							<input type="submit" value="A vote" class="vote" style="width: 75px; padding: 2px 5px;">
+						</div>
+							<div>Note de l'article : <?php echo $ThisArticle['note']; ?></div>
+					</form>
+
+
 		   		<hr>
 
 
@@ -98,6 +116,7 @@ print_r($_SESSION);
 			            	</div>
 			            	<span class="name"><?php echo $repArt['pseudo']; ?></span>
 			            	<span class="location">from <?php echo $repArt['location']; ?></span>
+			            	<span class="name retour" ><?php echo $repArt['score']; ?></span>
 			            	<p><?php echo $repArt['reponse']; ?></p>
 
 

@@ -18,4 +18,4 @@ endif;
 <?php // if ($_GET['page'] == "home") {echo "active";} ?>
 <?php // if ($_GET['page'] == "tutos") {echo "active";} ?>
 <?php // if ($_GET['page'] == "work") {echo "active";} ?>
-__>
+-->

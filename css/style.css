@@ -625,6 +625,24 @@ body #mainPro
 }
 
 
+.retour {
+	display: block;
+}
+
+
+.retour:before{
+	content: "";
+	width: 15px;
+	height: 15px;
+	float: left;
+	position: relative;
+	top: 2px;
+	margin-right: 5px;
+	background-image: url(../img/picto.png);
+	background-repeat: no-repeat;
+	background-size: 15px 15px;
+}
+
 /***************************************************
 ********************* ASIDE ***********************
 ***************************************************/
