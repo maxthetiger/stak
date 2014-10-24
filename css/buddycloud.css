@@ -316,13 +316,6 @@
     position:relative;
 }
 
-.buddycloud .best{
-    background-color: #16a8d7;
-    color: #fff;
-    width: calc(87% + 6px);
-    min-height:40px;
-    position:relative;
-}
 
 .buddycloud .comment,
 .buddycloud .answer{
@@ -366,4 +359,14 @@
 .avatar img{
     width: 50px;
     height: 50px;
+}
+
+.buddycloud .comment .avatar .formCom{
+    overflow: hidden;
+
+    height: 150px;
+}
+
+.avatar ul{
+    display: block;
 }

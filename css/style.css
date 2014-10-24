@@ -772,3 +772,30 @@ footer #copy
 .tagsArticle + hr{
 	margin-bottom: 10px;
 }
+
+
+
+
+
+#reponses{
+	/*background-color: #16A8D7;*/
+	padding: 20px 0;
+}
+
+
+#reponses #reponse{
+	width: 75%;
+	margin:auto;
+}
+
+#reponses #reponse textarea{
+	height: 8em;
+}
+
+#reponses #reponse header{
+padding: 5px;
+}
+
+#reponses #reponse textarea{
+	height: 8em;
+}
