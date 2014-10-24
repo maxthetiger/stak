@@ -78,7 +78,7 @@
 			<div class="more"><a href="?page=mesquestions">>> i++</a></div>
 		</div>
 
-		<!-- <div class="left">
+		<div class="left">
 			<header class="header_section"><span class="nombre">5,376</span>Points</header>
 			<main class="main">
 				<ul>
@@ -86,10 +86,10 @@
 					<li><a href=""><span>+2</span> Comment allumer la lumière</a></li>
 					<li><a href=""><span>+50</span> Best reponse à la question</a></li>
 					<li><a href=""><span>+2</span> Difficile de compter tout ces points</a></li>
-					<li><a href=""><span>-2</span> Tu as voter contre moi vilain !</a></li>
+					<li><a href=""><span>-2</span> Tu as voté contre moi vilain !</a></li>
 				</ul>
 			</main>
-			<div class="more"><a href="">>> i++</a></div>
+			<div class="more"><a href="#">>> i++</a></div>
 		</div>
 
 		<div class="left">
@@ -103,7 +103,7 @@
 					<li><a href="">Voici mon préféré</a></li>
 				</ul>
 			</main>
-			<div class="more"><a href="">>> i++</a></div>
-		</div> -->
+			<div class="more"><a href="#">>> i++</a></div>
+		</div>
 	</div>
 </div>
